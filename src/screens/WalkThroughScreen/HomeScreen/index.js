@@ -8,6 +8,7 @@ import SelectStation from '../SelectStation';
 import {homeScreenHeader} from '../../../routes/headers';
 import {cityList, drawerComponents, serviceItem} from '../../../constants';
 import MetroServices from '../Metro Services';
+import Geolocation from '@react-native-community/geolocation';
 import CustomButton from '../../../components/CustomButton';
 const attributes = {
   needBottomBorder: true,
@@ -25,6 +26,7 @@ const HomeScreen = ({navigation}: any) => {
     homeScreenHeader({navigation, attributes});
   }, []);
 
+  Geolocation.getCurrentPosition(info => console.log(info.coords));
   return (
     <SafeAreaView style={style.mainFrame}>
       <ScrollView showsVerticalScrollIndicator={false}>

@@ -26,6 +26,7 @@ const HomeScreenStack = () => {
             headerShown: false,
             presentation: 'transparentModal',
             animation: 'fade',
+            
           }}
         />
         <HomeStack.Screen

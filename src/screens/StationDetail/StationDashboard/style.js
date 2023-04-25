@@ -7,6 +7,15 @@ const style = StyleSheet.create({
     flex: 1,
     backgroundColor: colors.white,
   },
-  
+  footerScreen: {
+    position: 'absolute',
+    bottom: 0,
+    height: vh(100),
+    width: vw(328),
+    alignSelf: 'center',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
 });
 export default style;

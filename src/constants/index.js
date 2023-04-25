@@ -9,6 +9,43 @@ const delhiStations = [
     details: {
       lat: 28.7165,
       long: 77.17041,
+      contact: [{no: '72900052062', no: '8800793122'}],
+      station: [
+        {type: 'Divyang Friendly Station'},
+        {type: 'Lift/Escalator Available'},
+      ],
+      gates: [
+        {
+          no: 'Gate No 4',
+          name: 'Sarai Pipal Thala',
+          willChair: 'Yes',
+        },
+        {
+          no: 'Gate No 3',
+          name: 'Bharola Village',
+          willChair: 'No',
+        },
+        {
+          no: 'Gate No 2',
+          name: 'Moolchand Colony',
+          willChair: 'Yes',
+        },
+        {
+          no: 'Gate No 1',
+          name: 'Rajan Babu Road, Adarsh Nagar',
+          willChair: 'No',
+        },
+      ],
+      Platforms: [
+        {
+          no: 'Platform No. 2',
+          dir: 'SAMAYPUR BADLI',
+        },
+        {
+          no: 'Platform No. 1',
+          dir: 'HUDA CITY CENTRE',
+        },
+      ],
     },
   },
   {
@@ -18,6 +55,43 @@ const delhiStations = [
     details: {
       lat: 28.5668602,
       long: 77.2078058,
+      contact: [{no: '7290024757', no: '8800793140'}],
+      station: [
+        {type: 'Divyang Friendly Station'},
+        {type: 'Lift/Escalator Available'},
+      ],
+      gates: [
+        {
+          no: 'Gate No 4',
+          name: 'Ring Road, Vardhman Mahavir Medical College & Safdarjung Hospital',
+          willChair: 'No',
+        },
+        {
+          no: 'Gate No 3',
+          name: 'Ansari Nagar West, Post Office, Vardhman Mahavir Medical College & Safdarjung Hospital',
+          willChair: 'Yes',
+        },
+        {
+          no: 'Gate No 2',
+          name: 'AIIMS Hospital, Ansari Nagar East, Yusuf Sarai',
+          willChair: 'Yes',
+        },
+        {
+          no: 'Gate No 1',
+          name: 'AIIMS Hospital, Kidwai Nagar',
+          willChair: 'Yes',
+        },
+      ],
+      Platforms: [
+        {
+          no: 'Platform No. 2',
+          dir: 'SAMAYPUR BADLI',
+        },
+        {
+          no: 'Platform No. 1',
+          dir: 'HUDA CITY CENTRE',
+        },
+      ],
     },
   },
   {
@@ -27,6 +101,29 @@ const delhiStations = [
     details: {
       lat: 28.5668602,
       long: 77.2078058,
+      contact: [{no: '7290027380', no: '8527390345'}],
+      station: [
+        {type: 'Divyang Friendly Station'},
+        {type: 'Paid Porter/ Trolley Facility'},
+        {type: 'Lift/Escalator Available'},
+      ],
+      gates: [
+        {
+          no: 'Multiple Gates',
+          name: 'At Aiport there are multiple entries which connects Airport(T-3) to metro station',
+          willChair: 'Yes',
+        },
+      ],
+      Platforms: [
+        {
+          no: 'Platform No. 3',
+          dir: 'NEW DELHI (Yellow & Airport Line)',
+        },
+        {
+          no: 'Platform No. 2',
+          dir: 'DWARKA SECTOR - 21',
+        },
+      ],
     },
   },
   {
@@ -36,6 +133,39 @@ const delhiStations = [
     details: {
       lat: 28.61784195,
       long: 77.27948814325397,
+      contact: [{no: '7290021209', no: '8800793164'}],
+      station: [
+        {type: 'Divyang Friendly Station'},
+        {type: 'Parking Available'},
+        {type: 'Lift/Escalator Available'},
+      ],
+      gates: [
+        {
+          no: 'Gate No 3',
+          name: 'Foot Over Bridge',
+          willChair: 'No',
+        },
+        {
+          no: 'Gate No 2',
+          name: 'Parking Side',
+          willChair: 'Yes',
+        },
+        {
+          no: 'Gate No 1',
+          name: 'Fast Aproach Road',
+          willChair: 'Yes',
+        },
+      ],
+      Platforms: [
+        {
+          no: 'Platform No. 2',
+          dir: 'DWARKA SECTOR-21',
+        },
+        {
+          no: 'Platform No. 1',
+          dir: 'NOIDA ELECTRONIC CITY',
+        },
+      ],
     },
   },
   {
@@ -48,6 +178,51 @@ const delhiStations = [
     details: {
       lat: 28.6467533,
       long: 77.3180037,
+      contact: [
+        {
+          no: '7290012939',
+          no: '7290051077',
+          no: '8800793198',
+          no: '8448282934',
+        },
+      ],
+      station: [
+        {type: 'Divyang Friendly Station'},
+        {type: 'Lift/Escalator Available'},
+        {type: 'InterChange Station'},
+      ],
+      gates: [
+        {
+          no: 'Gate No 4',
+          name: 'Between Aanand Vihar ISBT and Railway Station',
+          willChair: 'Yes',
+        },
+        {
+          no: 'Gate No 3',
+          name: 'Bharola Village',
+          willChair: 'No',
+        },
+        {
+          no: 'Gate No 2',
+          name: 'Moolchand Colony',
+          willChair: 'Yes',
+        },
+        {
+          no: 'Gate No 1',
+          name: 'Rajan Babu Road, Adarsh Nagar',
+          willChair: 'No',
+        },
+      ],
+      Platforms: [
+        {
+          no: 'Platform No. 2',
+          dir: 'SAMAYPUR BADLI',
+        },
+        {
+          no: 'Platform No. 1',
+          dir: 'HUDA CITY CENTRE',
+        },
+      ],
     },
   },
   {

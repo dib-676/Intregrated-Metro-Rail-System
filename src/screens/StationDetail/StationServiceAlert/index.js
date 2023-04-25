@@ -29,7 +29,11 @@ const StationServiceAlert = (props: any) => {
   console.log(props.data.length);
   return (
     <View style={{height: vh(70 * props.data.length)}}>
-      <FlatList data={props.data} renderItem={({item}) => renderItem(item)} />
+      <FlatList
+        scrollEnabled={false}
+        data={props.data}
+        renderItem={({item}) => renderItem(item)}
+      />
     </View>
   );
 };

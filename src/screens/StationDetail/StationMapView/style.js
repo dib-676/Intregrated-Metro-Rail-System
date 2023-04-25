@@ -7,7 +7,13 @@ const style = StyleSheet.create({
     marginVertical: vh(10),
     width: vw(328),
     height: vh(180),
-    borderWidth: 2,
+    borderWidth: 5,
+    borderColor: colors.black30,
+    opacity: 0.9,
+    shadowOffset: {
+      width: vw(328),
+      height: vh(180),
+    },
   },
   map: {
     ...StyleSheet.absoluteFillObject,

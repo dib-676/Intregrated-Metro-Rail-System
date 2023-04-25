@@ -3,6 +3,7 @@ import {
   Image,
   ImageBackground,
   SafeAreaView,
+  ScrollView,
   Text,
   TouchableOpacity,
   View,
@@ -15,30 +16,31 @@ import {getCity} from '../../../constants';
 import StationServiceAlert from '../StationServiceAlert';
 import StationMapView from '../StationMapView';
 import {useGetStationsQuery} from '../../../redux-toolkit/api/metroApi';
+import StationFooter from '../StationFooter';
 const StationDashboard = ({navigation}: any) => {
   const {stationName, city} = useSelector((state: any) => state.metroReducer);
   const serviceLineData = getCity[city].filter(
     (val: any) => val.name == stationName,
   )[0];
-  // const {data, error, isLoading} = useGetStationsQuery(stationName);
-  // useEffect(() => {
-  //   if (data !== undefined) {
-  //     console.log('data', data);
-  //   }
-  // });
   console.log(serviceLineData.lineNumber);
   return (
     <SafeAreaView style={style.mainFrame}>
-      <StationHeader
-        onBackPress={() => navigation.goBack()}
-        label={stationName}
-      />
-      <StationServiceAlert data={serviceLineData.lineNumber} />
-      <StationMapView
-        lat={serviceLineData.details.lat}
-        long={serviceLineData.details.long}
-        name={serviceLineData.name}
-      />
+      <ScrollView>
+        <StationHeader
+          onBackPress={() => navigation.goBack()}
+          label={stationName}
+        />
+        <StationServiceAlert data={serviceLineData.lineNumber} />
+        <StationMapView
+          lat={serviceLineData.details.lat}
+          long={serviceLineData.details.long}
+          name={serviceLineData.name}
+        />
+        
+      </ScrollView>
+      <View style={style.footerScreen}>
+        <StationFooter data={[]} />
+      </View>
     </SafeAreaView>
   );
 };

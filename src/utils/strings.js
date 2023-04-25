@@ -12,6 +12,8 @@ export default {
   onlineRecharge: 'Online Recharge',
   modeDate: 'date',
   modeTime: 'time',
+  divyangStation:'Divyang Friendly Station',
+  lift_escalator:'Lift/Escalator Available'
 };
 export const cities = {
   delhiMetro: 'Delhi Metro',
