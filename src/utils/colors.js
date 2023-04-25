@@ -13,6 +13,8 @@ export default {
   white50: 'rgba(255,255,255,0.5)',
   white60: 'rgba(255,255,255,0.6)',
   white70: 'rgba(255,255,255,0.7)',
+  white80: 'rgba(255,255,255,0.8)',
+  white90: 'rgba(255,255,255,0.9)',
   //Blue Series
   blue: 'rgba(3, 128, 240,1)',
   blue50: 'rgba(3, 128, 240,0.5)',

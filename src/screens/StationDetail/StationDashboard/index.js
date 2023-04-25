@@ -34,7 +34,11 @@ const StationDashboard = ({navigation}: any) => {
         label={stationName}
       />
       <StationServiceAlert data={serviceLineData.lineNumber} />
-      <StationMapView />
+      <StationMapView
+        lat={serviceLineData.details.lat}
+        long={serviceLineData.details.long}
+        name={serviceLineData.name}
+      />
     </SafeAreaView>
   );
 };

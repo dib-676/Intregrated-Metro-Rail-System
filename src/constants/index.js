@@ -1,5 +1,4 @@
-import {useSelector} from 'react-redux';
-import {colors, images, strings} from '../utils';
+import {colors, strings} from '../utils';
 import {cities} from '../utils/strings';
 
 const delhiStations = [
@@ -7,25 +6,37 @@ const delhiStations = [
     name: 'ADARSH NAGAR',
     lines: ['yellow'],
     lineNumber: [{no: 2, color: 'yellow'}],
-    details: {},
+    details: {
+      lat: 28.7165,
+      long: 77.17041,
+    },
   },
   {
     name: 'AIIMS',
     lines: ['yellow'],
     lineNumber: [{no: 2, color: 'yellow'}],
-    details: {},
+    details: {
+      lat: 28.5668602,
+      long: 77.2078058,
+    },
   },
   {
     name: 'AIRPORT (T-3)',
     lines: ['orange'],
     lineNumber: [{no: 10, color: 'orange'}],
-    details: {},
+    details: {
+      lat: 28.5668602,
+      long: 77.2078058,
+    },
   },
   {
     name: 'AKSHARDHAM',
     lines: ['blue'],
     lineNumber: [{no: 3, color: 'blue'}],
-    details: {},
+    details: {
+      lat: 28.61784195,
+      long: 77.27948814325397,
+    },
   },
   {
     name: 'ANAND VIHAR ISBT',
@@ -34,25 +45,37 @@ const delhiStations = [
       {no: 3, color: 'blue'},
       {no: 7, color: 'pink'},
     ],
-    details: {},
+    details: {
+      lat: 28.6467533,
+      long: 77.3180037,
+    },
   },
   {
     name: 'ARJAN GARH',
     lines: ['yellow'],
     lineNumber: [{no: 2, color: 'yellow'}],
-    details: {},
+    details: {
+      lat: 28.4807352,
+      long: 77.1257622,
+    },
   },
   {
     name: 'ARTHALA',
-    lines: ['yellow'],
-    lineNumber: [{no: 2, color: 'yellow'}],
-    details: {},
+    lines: ['red'],
+    lineNumber: [{no: 1, color: 'red'}],
+    details: {
+      lat: 28.676999,
+      long: 77.3918919,
+    },
   },
   {
     name: 'ASHOK PARK MAIN',
-    lines: ['yellow'],
-    lineNumber: [{no: 2, color: 'yellow'}],
-    details: {},
+    lines: ['green'],
+    lineNumber: [{no: 2, color: 'green'}],
+    details: {
+      lat: 28.6716045,
+      long: 77.155291,
+    },
   },
   {
     name: 'ASHRAM',

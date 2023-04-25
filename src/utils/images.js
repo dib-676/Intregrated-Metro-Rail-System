@@ -11,4 +11,6 @@ export default {
   date: require('../assets/images/date.png'),
   time: require('../assets/images/time.png'),
   streetView: require('../assets/images/map_view.webp'),
+  plus: require('../assets/images/plus.png'),
+  minus: require('../assets/images/minus.png'),
 };
