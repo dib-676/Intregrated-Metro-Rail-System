@@ -16,8 +16,12 @@ const DrawerScreen = ({route, navigation}: any) => {
       <Text
         style={style.item}
         onPress={() => {
-          navigation.pop();
-          // navigation.navigate(item.fileName)
+          if (item.name === 'Search Station') {
+            navigation.pop();
+            navigation.navigate(item.onPress.routeName, item.onPress.params);
+          } else {
+            navigation.pop();
+          }
         }}>
         {item.name}
       </Text>

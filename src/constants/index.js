@@ -10,15 +10,17 @@ const delhiStations = [
       lat: 28.7165,
       long: 77.17041,
       otherDetails: [
-        {contact: [{no: '72900052062', no: '8800793122'}]},
+        {value: [{no: '72900052062', no: '8800793122'}], label: 'Contact'},
         {
-          station: [
+          value: [
             {type: 'Divyang Friendly Station'},
             {type: 'Lift/Escalator Available'},
           ],
+          label: 'Station',
         },
         {
-          gates: [
+          label: 'Gates',
+          value: [
             {
               no: 'Gate No 4',
               name: 'Sarai Pipal Thala',
@@ -42,7 +44,8 @@ const delhiStations = [
           ],
         },
         {
-          Platforms: [
+          label: 'Platforms',
+          value: [
             {
               no: 'Platform No. 2',
               dir: 'SAMAYPUR BADLI',
@@ -739,7 +742,10 @@ const kolkataStations = [
 const drawerComponents = [
   {
     name: 'Search Station',
-    fileName: '',
+    onPress: {
+      routeName: 'StationList',
+      params: {searchType: 'Search Station'},
+    },
   },
   {
     name: 'Tokens and Smart Card',

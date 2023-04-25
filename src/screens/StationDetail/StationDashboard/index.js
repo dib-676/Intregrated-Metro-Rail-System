@@ -17,6 +17,7 @@ import StationServiceAlert from '../StationServiceAlert';
 import StationMapView from '../StationMapView';
 import {useGetStationsQuery} from '../../../redux-toolkit/api/metroApi';
 import StationFooter from '../StationFooter';
+import StationAbtractDetail from '../StationAbstactDetail';
 const StationDashboard = ({navigation}: any) => {
   const {stationName, city} = useSelector((state: any) => state.metroReducer);
   const serviceLineData = getCity[city].filter(
@@ -36,7 +37,7 @@ const StationDashboard = ({navigation}: any) => {
           long={serviceLineData.details.long}
           name={serviceLineData.name}
         />
-        
+        <StationAbtractDetail data={serviceLineData.details.otherDetails} />
       </ScrollView>
       <View style={style.footerScreen}>
         <StationFooter data={[]} />
