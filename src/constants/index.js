@@ -9,41 +9,49 @@ const delhiStations = [
     details: {
       lat: 28.7165,
       long: 77.17041,
-      contact: [{no: '72900052062', no: '8800793122'}],
-      station: [
-        {type: 'Divyang Friendly Station'},
-        {type: 'Lift/Escalator Available'},
-      ],
-      gates: [
+      otherDetails: [
+        {contact: [{no: '72900052062', no: '8800793122'}]},
         {
-          no: 'Gate No 4',
-          name: 'Sarai Pipal Thala',
-          willChair: 'Yes',
+          station: [
+            {type: 'Divyang Friendly Station'},
+            {type: 'Lift/Escalator Available'},
+          ],
         },
         {
-          no: 'Gate No 3',
-          name: 'Bharola Village',
-          willChair: 'No',
+          gates: [
+            {
+              no: 'Gate No 4',
+              name: 'Sarai Pipal Thala',
+              willChair: 'Yes',
+            },
+            {
+              no: 'Gate No 3',
+              name: 'Bharola Village',
+              willChair: 'No',
+            },
+            {
+              no: 'Gate No 2',
+              name: 'Moolchand Colony',
+              willChair: 'Yes',
+            },
+            {
+              no: 'Gate No 1',
+              name: 'Rajan Babu Road, Adarsh Nagar',
+              willChair: 'No',
+            },
+          ],
         },
         {
-          no: 'Gate No 2',
-          name: 'Moolchand Colony',
-          willChair: 'Yes',
-        },
-        {
-          no: 'Gate No 1',
-          name: 'Rajan Babu Road, Adarsh Nagar',
-          willChair: 'No',
-        },
-      ],
-      Platforms: [
-        {
-          no: 'Platform No. 2',
-          dir: 'SAMAYPUR BADLI',
-        },
-        {
-          no: 'Platform No. 1',
-          dir: 'HUDA CITY CENTRE',
+          Platforms: [
+            {
+              no: 'Platform No. 2',
+              dir: 'SAMAYPUR BADLI',
+            },
+            {
+              no: 'Platform No. 1',
+              dir: 'HUDA CITY CENTRE',
+            },
+          ],
         },
       ],
     },
@@ -55,41 +63,49 @@ const delhiStations = [
     details: {
       lat: 28.5668602,
       long: 77.2078058,
-      contact: [{no: '7290024757', no: '8800793140'}],
-      station: [
-        {type: 'Divyang Friendly Station'},
-        {type: 'Lift/Escalator Available'},
-      ],
-      gates: [
+      otherDetails: [
+        {contact: [{no: '7290024757', no: '8800793140'}]},
         {
-          no: 'Gate No 4',
-          name: 'Ring Road, Vardhman Mahavir Medical College & Safdarjung Hospital',
-          willChair: 'No',
+          station: [
+            {type: 'Divyang Friendly Station'},
+            {type: 'Lift/Escalator Available'},
+          ],
         },
         {
-          no: 'Gate No 3',
-          name: 'Ansari Nagar West, Post Office, Vardhman Mahavir Medical College & Safdarjung Hospital',
-          willChair: 'Yes',
+          gates: [
+            {
+              no: 'Gate No 4',
+              name: 'Ring Road, Vardhman Mahavir Medical College & Safdarjung Hospital',
+              willChair: 'No',
+            },
+            {
+              no: 'Gate No 3',
+              name: 'Ansari Nagar West, Post Office, Vardhman Mahavir Medical College & Safdarjung Hospital',
+              willChair: 'Yes',
+            },
+            {
+              no: 'Gate No 2',
+              name: 'AIIMS Hospital, Ansari Nagar East, Yusuf Sarai',
+              willChair: 'Yes',
+            },
+            {
+              no: 'Gate No 1',
+              name: 'AIIMS Hospital, Kidwai Nagar',
+              willChair: 'Yes',
+            },
+          ],
         },
         {
-          no: 'Gate No 2',
-          name: 'AIIMS Hospital, Ansari Nagar East, Yusuf Sarai',
-          willChair: 'Yes',
-        },
-        {
-          no: 'Gate No 1',
-          name: 'AIIMS Hospital, Kidwai Nagar',
-          willChair: 'Yes',
-        },
-      ],
-      Platforms: [
-        {
-          no: 'Platform No. 2',
-          dir: 'SAMAYPUR BADLI',
-        },
-        {
-          no: 'Platform No. 1',
-          dir: 'HUDA CITY CENTRE',
+          Platforms: [
+            {
+              no: 'Platform No. 2',
+              dir: 'SAMAYPUR BADLI',
+            },
+            {
+              no: 'Platform No. 1',
+              dir: 'HUDA CITY CENTRE',
+            },
+          ],
         },
       ],
     },
