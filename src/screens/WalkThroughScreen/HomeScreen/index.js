@@ -22,7 +22,7 @@ const attributes = {
   drawerComponents: drawerComponents,
 };
 const HomeScreen = ({navigation}) => {
-  const {source, destination, location} = useSelector(
+  const {source, destination, location, stationData} = useSelector(
     state => state.metroReducer,
   );
   const dispatch = useDispatch();
@@ -31,11 +31,14 @@ const HomeScreen = ({navigation}) => {
   useLayoutEffect(() => {
     homeScreenHeader({navigation, attributes});
   }, []);
-  const newlocation = getNearestStations({location});
+  // getNearestStations({location});
 
-  if (newlocation.length !== 0) {
-    const x = newlocation[0].geometry.location;
-    distanceResolver({origin: {lat: x.lat, long: x.lng}, dest: location});
+  if (stationData.length !== 0) {
+    const x = stationData[0].geometry.location;
+    distanceResolver({
+      origin: {lat: x.lat, long: x.lng},
+      dest: {lat: location.lat, long: location.long},
+    });
   }
   return (
     <SafeAreaView style={style.mainFrame}>

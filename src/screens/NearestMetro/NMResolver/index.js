@@ -3,9 +3,11 @@ import {
   useGetDistanceQuery,
   useGetStationsQuery,
 } from '../../../redux-toolkit/api/metroApi';
+import {useDispatch} from 'react-redux';
+import {setStationData} from '../../../redux-toolkit/reducers/metroSlice';
 
 export const getNearestStations = (props: any) => {
-  const [stationData, setStationData] = useState([]);
+  const dispatch = useDispatch();
   const {data, isLoading} = useGetStationsQuery({
     lat: props.location.lat,
     long: props.location.long,
@@ -13,20 +15,19 @@ export const getNearestStations = (props: any) => {
   useEffect(() => {
     if (data !== undefined) {
       console.log(data.results);
-      setStationData(data.results);
+      dispatch(setStationData(data.results));
     }
-  });
-  return stationData;
+  }, [isLoading]);
 };
 
 export const distanceResolver = ({origin, dest}) => {
-  const [dist, setDist] = useState([]);
+  console.log(origin, dest);
   const {data, isLoading} = useGetDistanceQuery({origin: origin, dest: dest});
   useEffect(() => {
     if (data !== undefined) {
       console.log(data);
       //   setDist(data.results);
     }
-  });
+  }, [isLoading]);
   //   return stationData;
 };

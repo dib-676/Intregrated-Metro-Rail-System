@@ -5,11 +5,13 @@ import style from './style';
 import {useEffect, useState} from 'react';
 import BackgroundTimer from '../../utils/backgroundTimer';
 import Geolocation from '@react-native-community/geolocation';
-import {useDispatch} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 import {setLocation} from '../../redux-toolkit/reducers/metroSlice';
+import {getNearestStations} from '../NearestMetro/NMResolver';
 
 const SplashScreen = ({navigation}: any) => {
   const [seconds, setSeconds] = useState(0);
+  const {location} = useSelector((state: any) => state.metroReducer);
   const dispatch = useDispatch();
   useEffect(() => {
     Geolocation.getCurrentPosition(info =>
@@ -26,12 +28,12 @@ const SplashScreen = ({navigation}: any) => {
       } else if (seconds == 8) {
         BackgroundTimer.clearInterval(acc_interval);
       }
-    }, 1000);
-
+    }, 1000);  
     return () => {
       BackgroundTimer.clearInterval(acc_interval);
     };
   });
+  getNearestStations({location});
   useEffect(() => {
     if (seconds == 4) {
       navigation.navigate('Home');
