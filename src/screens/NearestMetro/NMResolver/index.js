@@ -20,14 +20,15 @@ export const getNearestStations = (props: any) => {
   }, [isLoading]);
 };
 
-export const distanceResolver = ({origin, dest}) => {
+export const distanceResolver = ({origin, dest}: any) => {
   console.log(origin, dest);
   const {data, isLoading} = useGetDistanceQuery({origin: origin, dest: dest});
   useEffect(() => {
     if (data !== undefined) {
       console.log(data);
+      return data;
       //   setDist(data.results);
     }
   }, [isLoading]);
-  //   return stationData;
+  // return stationData;
 };
