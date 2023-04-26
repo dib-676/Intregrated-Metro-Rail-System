@@ -1,5 +1,6 @@
 import CityDropDownList from '../components/CityDropDownList';
 import StationList from '../components/StationDropDownList';
+import SplashScreen from './SplashScreen';
 import StationDashboard from './StationDetail/StationDashboard';
 import DrawerScreen from './WalkThroughScreen/DrawerScreen';
 import HomeScreen from './WalkThroughScreen/HomeScreen';
@@ -10,4 +11,5 @@ export {
   HomeScreen,
   DrawerScreen,
   StationDashboard,
+  SplashScreen
 };

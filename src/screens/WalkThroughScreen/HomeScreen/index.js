@@ -10,6 +10,10 @@ import {cityList, drawerComponents, serviceItem} from '../../../constants';
 import MetroServices from '../Metro Services';
 import Geolocation from '@react-native-community/geolocation';
 import CustomButton from '../../../components/CustomButton';
+import {
+  distanceResolver,
+  getNearestStations,
+} from '../../NearestMetro/NMResolver';
 const attributes = {
   needBottomBorder: true,
   icon: images.metroLogo,
@@ -17,16 +21,22 @@ const attributes = {
   drawerEnabled: true,
   drawerComponents: drawerComponents,
 };
-const HomeScreen = ({navigation}: any) => {
-  const {source, destination} = useSelector((state: any) => state.metroReducer);
+const HomeScreen = ({navigation}) => {
+  const {source, destination, location} = useSelector(
+    state => state.metroReducer,
+  );
   const dispatch = useDispatch();
   const [date, setDate] = useState(new Date().toLocaleDateString());
   const [time, setTime] = useState(new Date().toLocaleTimeString());
   useLayoutEffect(() => {
     homeScreenHeader({navigation, attributes});
   }, []);
+  const newlocation = getNearestStations({location});
 
-  Geolocation.getCurrentPosition(info => console.log(info.coords));
+  if (newlocation.length !== 0) {
+    const x = newlocation[0].geometry.location;
+    distanceResolver({origin: {lat: x.lat, long: x.lng}, dest: location});
+  }
   return (
     <SafeAreaView style={style.mainFrame}>
       <ScrollView showsVerticalScrollIndicator={false}>

@@ -5,6 +5,7 @@ const initialState = {
   source: '',
   destination: '',
   stationName: '',
+  location: {},
 };
 export const metroSlice = createSlice({
   name: 'startScreen',
@@ -22,7 +23,11 @@ export const metroSlice = createSlice({
     setStationName: (state, actions) => {
       state.stationName = actions.payload;
     },
+    setLocation: (state, actions) => {
+      state.location = {...state.location, ...actions.payload};
+    },
   },
 });
-export const {setCity, setSource, setDestination,setStationName} = metroSlice.actions;
+export const {setCity, setSource, setDestination, setStationName, setLocation} =
+  metroSlice.actions;
 export default metroSlice.reducer;

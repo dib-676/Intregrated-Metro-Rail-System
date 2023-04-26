@@ -13,4 +13,5 @@ export default {
   streetView: require('../assets/images/map_view.webp'),
   plus: require('../assets/images/plus.png'),
   minus: require('../assets/images/minus.png'),
+  spashBGImg: require('../assets/images/SpashScreen.jpeg'),
 };

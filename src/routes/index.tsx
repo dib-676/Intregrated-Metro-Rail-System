@@ -2,6 +2,7 @@ import React from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {
+  SplashScreen,
   HomeScreen,
   DrawerScreen,
   CityDropDownList,
@@ -14,8 +15,13 @@ const MainStack = createNativeStackNavigator();
 
 const HomeScreenStack = () => {
   return (
-    <HomeStack.Navigator initialRouteName="Home">
+    <HomeStack.Navigator initialRouteName="Splash">
       <HomeStack.Group>
+        <HomeStack.Screen
+          name="Splash"
+          component={SplashScreen}
+          options={{headerShown: false}}
+        />
         <HomeStack.Screen name="Home" component={HomeScreen} />
       </HomeStack.Group>
       <HomeStack.Group>
@@ -26,7 +32,6 @@ const HomeScreenStack = () => {
             headerShown: false,
             presentation: 'transparentModal',
             animation: 'fade',
-            
           }}
         />
         <HomeStack.Screen
