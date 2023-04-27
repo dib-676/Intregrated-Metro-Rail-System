@@ -14,18 +14,10 @@ export const metroApi = createApi({
         `/place/nearbysearch/json?key=${API_KEY}&location=${location.lat},${location.long}&radius=5000&type=subway_station`,
     }),
     getDistance: builder.query({
-      query: location => (
-        console.log('loc', location),
-        console.log('location origin', location.origin),
-        console.log('location destination', location.dest),
-        {
-          url: `/distancematrix/json?origins=${location.origin.lat},${location.origin.long}&destinations=${location.dest.lat},${location.dest.long}&key=${API_KEY}`,
-          method: 'POST',
-        }
-      ),
+      query: location =>
+        `/distancematrix/json?origins=${location.origin.lat},${location.origin.long}&destinations=${location.dest.lat},${location.dest.long}&key=${API_KEY}`,
     }),
   }),
 });
-
 export const {useGetStationsQuery, useGetDistanceQuery} = metroApi;
 export default metroApi;

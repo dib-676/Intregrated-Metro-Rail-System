@@ -792,7 +792,7 @@ const serviceItem = [
   {
     label: strings.nearestMetro,
     onPress: {
-      routeName: 'StationList',
+      routeName: 'NearestMetro',
       params: {},
     },
   },

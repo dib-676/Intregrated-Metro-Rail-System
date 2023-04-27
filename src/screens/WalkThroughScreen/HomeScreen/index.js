@@ -31,15 +31,15 @@ const HomeScreen = ({navigation}) => {
   useLayoutEffect(() => {
     homeScreenHeader({navigation, attributes});
   }, []);
-  // getNearestStations({location});
 
-  if (stationData.length !== 0) {
-    const x = stationData[0].geometry.location;
-    distanceResolver({
-      origin: {lat: x.lat, long: x.lng},
-      dest: {lat: location.lat, long: location.long},
-    });
-  }
+  // if (stationData.length !== 0) {
+  //   const x = stationData[0].geometry.location;
+  //   const y = distanceResolver({
+  //     origin: {lat: x.lat, long: x.lng},
+  //     dest: {lat: location.lat, long: location.long},
+  //   });
+  // }
+
   return (
     <SafeAreaView style={style.mainFrame}>
       <ScrollView showsVerticalScrollIndicator={false}>

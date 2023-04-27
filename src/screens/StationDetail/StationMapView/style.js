@@ -29,12 +29,12 @@ const style = StyleSheet.create({
     alignItems: 'center',
   },
   zoomIn: {
-    left: 320,
-    bottom: 60,
+    left: vw(280),
+    bottom: vh(50),
   },
   zoomOut: {
-    left: 320,
-    bottom: 20,
+    left: vw(280),
+    bottom: vh(10),
   },
   zoomIcon: {
     width: vw(20),

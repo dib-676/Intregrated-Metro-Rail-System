@@ -6,7 +6,7 @@ import {
 import {useDispatch} from 'react-redux';
 import {setStationData} from '../../../redux-toolkit/reducers/metroSlice';
 
-export const getNearestStations = (props: any) => {
+export const getNearestStations = props => {
   const dispatch = useDispatch();
   const {data, isLoading} = useGetStationsQuery({
     lat: props.location.lat,
@@ -20,15 +20,15 @@ export const getNearestStations = (props: any) => {
   }, [isLoading]);
 };
 
-export const distanceResolver = ({origin, dest}: any) => {
-  console.log(origin, dest);
+export const distanceResolver = ({origin, dest}) => {
+  const [dist, setDist] = useState({});
   const {data, isLoading} = useGetDistanceQuery({origin: origin, dest: dest});
   useEffect(() => {
     if (data !== undefined) {
-      console.log(data);
-      return data;
-      //   setDist(data.results);
+      setDist({...data.rows[0].elements[0]});
     }
   }, [isLoading]);
-  // return stationData;
+  if (Object.keys(dist).length !== 0) {
+    return dist;
+  }
 };

@@ -8,6 +8,7 @@ import {
   CityDropDownList,
   StationList,
   StationDashboard,
+  NearestMetro,
 } from '../screens';
 
 const HomeStack = createNativeStackNavigator();
@@ -59,6 +60,15 @@ const HomeScreenStack = () => {
             headerShown: false,
             animation: 'simple_push',
           }}
+        />
+        <HomeStack.Screen
+          name="NearestMetro"
+          component={NearestMetro}
+          options={
+            {
+              // headerShown: false,
+            }
+          }
         />
       </HomeStack.Group>
     </HomeStack.Navigator>
