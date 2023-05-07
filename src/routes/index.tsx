@@ -9,7 +9,14 @@ import {
   StationList,
   StationDashboard,
   NearestMetro,
+  GeneralInfo,
+  OnlineRecharge,
+  FirstLastMetro,
 } from '../screens';
+import {useEffect} from 'react';
+import Geolocation from '@react-native-community/geolocation';
+import {useDispatch} from 'react-redux';
+import {setLocation} from '../redux-toolkit/reducers/metroSlice';
 
 const HomeStack = createNativeStackNavigator();
 const MainStack = createNativeStackNavigator();
@@ -41,7 +48,7 @@ const HomeScreenStack = () => {
           options={{
             headerShown: false,
             presentation: 'transparentModal',
-            animation: 'fade',
+            animation: 'fade_from_bottom',
           }}
         />
         <HomeStack.Screen
@@ -64,11 +71,34 @@ const HomeScreenStack = () => {
         <HomeStack.Screen
           name="NearestMetro"
           component={NearestMetro}
-          options={
-            {
-              // headerShown: false,
-            }
-          }
+          options={{
+            // headerShown: false,
+            headerTitle: 'Nearest Metro',
+          }}
+        />
+        <HomeStack.Screen
+          name="GeneralInfo"
+          component={GeneralInfo}
+          options={{
+            // headerShown: false,
+            headerTitle: 'General Information',
+          }}
+        />
+        <HomeStack.Screen
+          name="OnlineRecharge"
+          component={OnlineRecharge}
+          options={{
+            // headerShown: false,
+            headerTitle: 'Online Recharge',
+          }}
+        />
+        <HomeStack.Screen
+          name="FirstLastMetro"
+          component={FirstLastMetro}
+          options={{
+            // headerShown: false,
+            headerTitle: 'First & Last Metro',
+          }}
         />
       </HomeStack.Group>
     </HomeStack.Navigator>
@@ -76,6 +106,14 @@ const HomeScreenStack = () => {
 };
 
 const Main = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    Geolocation.getCurrentPosition(info =>
+      dispatch(
+        setLocation({lat: info.coords.latitude, long: info.coords.longitude}),
+      ),
+    );
+  }, []);
   return (
     <NavigationContainer>
       <MainStack.Navigator>

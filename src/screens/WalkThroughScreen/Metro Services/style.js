@@ -21,5 +21,9 @@ const style = StyleSheet.create({
     fontWeight: '700',
     color: colors.darkBlack,
   },
+  mapSearchImg: {
+    width: vw(30),
+    height: vh(30),
+  },
 });
 export default style;

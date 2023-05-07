@@ -8,6 +8,14 @@ const initialState = {
   stationData: [],
   location: {},
 };
+const iniState = {
+  city: 'Delhi Metro',
+  source: '',
+  destination: '',
+  stationName: '',
+  stationData: [],
+  location: {},
+};
 export const metroSlice = createSlice({
   name: 'startScreen',
   initialState,
@@ -30,6 +38,11 @@ export const metroSlice = createSlice({
     setStationData: (state, actions) => {
       state.stationData = actions.payload;
     },
+    setReset: state => {
+      state.city = 'Delhi Metro';
+      state.source = '';
+      state.destination = '';
+    },
   },
 });
 export const {
@@ -39,5 +52,6 @@ export const {
   setStationName,
   setLocation,
   setStationData,
+  setReset,
 } = metroSlice.actions;
 export default metroSlice.reducer;

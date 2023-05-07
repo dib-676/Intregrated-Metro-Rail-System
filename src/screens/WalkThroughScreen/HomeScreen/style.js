@@ -6,12 +6,22 @@ const style = StyleSheet.create({
     flex: 1,
     backgroundColor: colors.white,
   },
-  planJourney: {
+  planYourJourney: {
     marginHorizontal: vw(20),
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  planJourney: {
     marginVertical: vw(16),
     fontSize: vw(18),
     color: colors.darkBlack,
     fontFamily: fonts.IBM_SemiBold,
+  },
+  reset: {
+    fontSize: vw(14),
+    color: colors.red,
+    textDecorationLine: 'underline',
   },
   dateTimerView: {
     height: vh(100),

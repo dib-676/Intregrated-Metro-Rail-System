@@ -11,29 +11,20 @@ import {getNearestStations} from '../NearestMetro/NMResolver';
 
 const SplashScreen = ({navigation}: any) => {
   const [seconds, setSeconds] = useState(0);
-  const {location} = useSelector((state: any) => state.metroReducer);
-  const dispatch = useDispatch();
-  useEffect(() => {
-    Geolocation.getCurrentPosition(info =>
-      dispatch(
-        setLocation({lat: info.coords.latitude, long: info.coords.longitude}),
-      ),
-    );
-  }, []);
-
+  getNearestStations();
   useEffect(() => {
     const acc_interval = BackgroundTimer.setInterval(() => {
       if (seconds < 8) {
         setSeconds(seconds + 1);
-      } else if (seconds == 8) {
+      } else if (seconds == 4) {
         BackgroundTimer.clearInterval(acc_interval);
       }
-    }, 1000);  
+    }, 1000);
     return () => {
       BackgroundTimer.clearInterval(acc_interval);
     };
   });
-  getNearestStations({location});
+
   useEffect(() => {
     if (seconds == 4) {
       navigation.navigate('Home');

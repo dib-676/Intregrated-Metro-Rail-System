@@ -18,7 +18,7 @@ export default {
   //Blue Series
   blue: 'rgba(3, 128, 240,1)',
   blue50: 'rgba(3, 128, 240,0.5)',
-  blue: 'rgba(3, 128, 240,1)',
+  blue200: 'rgba(150, 200, 240,1)',
   blue: 'rgba(3, 128, 240,1)',
   blue: 'rgba(3, 128, 240,1)',
 
@@ -48,6 +48,7 @@ export default {
   lightPink: 'rgba(255,180,255,1)',
   red: 'rgba(255,0,0,1)',
   aqua: 'aqua',
+  backgroundColor: 'rgba(231, 233, 237, 1)',
 
   green: 'green',
 };

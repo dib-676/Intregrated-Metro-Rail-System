@@ -1,4 +1,4 @@
-import {colors, strings} from '../utils';
+import {colors, images, strings} from '../utils';
 import {cities} from '../utils/strings';
 
 const delhiStations = [
@@ -418,119 +418,140 @@ const delhiStations = [
 ];
 const noidaStations = [
   {
+    serial: 0,
     name: 'NOIDA SECTOR 51',
     lines: ['aqua'],
+    lineNumber: [1],
     details: {},
   },
   {
+    serial: 1,
     name: 'NOIDA SECTOR 50',
     lines: ['aqua'],
     lineNumber: [1],
     details: {},
   },
   {
+    serial: 2,
     name: 'NOIDA SECTOR 76',
     lines: ['aqua'],
     lineNumber: [1],
     details: {},
   },
   {
+    serial: 3,
     name: 'NOIDA SECTOR 101',
     lines: ['aqua'],
     lineNumber: [1],
     details: {},
   },
   {
+    serial: 4,
     name: 'NOIDA SECTOR 81',
     lines: ['aqua'],
     lineNumber: [1],
     details: {},
   },
   {
+    serial: 5,
     name: 'NSEZ',
     lines: ['aqua'],
     lineNumber: [1],
     details: {},
   },
   {
+    serial: 6,
     name: 'NOIDA SECTOR 83',
     lines: ['aqua'],
     lineNumber: [1],
     details: {},
   },
   {
+    serial: 7,
     name: 'NOIDA SECTOR 137',
     lines: ['aqua'],
     lineNumber: [1],
     details: {},
   },
   {
+    serial: 8,
     name: 'NOIDA SECTOR 142',
     lines: ['aqua'],
     lineNumber: [1],
     details: {},
   },
   {
+    serial: 9,
     name: 'NOIDA SECTOR 143',
     lines: ['aqua'],
     lineNumber: [1],
     details: {},
   },
   {
+    serial: 10,
     name: 'NOIDA SECTOR 144',
     lines: ['aqua'],
     lineNumber: [1],
     details: {},
   },
   {
+    serial: 11,
     name: 'NOIDA SECTOR 145',
     lines: ['aqua'],
     lineNumber: [1],
     details: {},
   },
   {
+    serial: 12,
     name: 'NOIDA SECTOR 146',
     lines: ['aqua'],
     lineNumber: [1],
     details: {},
   },
   {
+    serial: 13,
     name: 'NOIDA SECTOR 147',
     lines: ['aqua'],
     lineNumber: [1],
     details: {},
   },
   {
+    serial: 14,
     name: 'NOIDA SECTOR 148',
     lines: ['aqua'],
     lineNumber: [1],
     details: {},
   },
   {
+    serial: 15,
     name: 'PARI CHOWK',
     lines: ['aqua'],
     lineNumber: [1],
     details: {},
   },
   {
+    serial: 16,
     name: 'ALPHA 1',
     lines: ['aqua'],
     lineNumber: [1],
     details: {},
   },
   {
+    serial: 17,
     name: 'DELTA 1',
     lines: ['aqua'],
     lineNumber: [1],
     details: {},
   },
   {
+    serial: 18,
     name: 'GNIDA OFFICE',
     lines: ['aqua'],
     lineNumber: [1],
     details: {},
   },
   {
+    serial: 19,
     name: 'DEPORT',
     lines: ['aqua'],
     lineNumber: [1],
@@ -753,7 +774,10 @@ const drawerComponents = [
   },
   {
     name: 'General Information',
-    fileName: '',
+    onPress: {
+      routeName: 'GeneralInfo',
+      params: {},
+    },
   },
   {
     name: 'Lost & Found',
@@ -788,6 +812,7 @@ const serviceItem = [
       routeName: 'StationList',
       params: {searchType: 'Search Station'},
     },
+    icon: images.mapSearchImg,
   },
   {
     label: strings.nearestMetro,
@@ -795,20 +820,23 @@ const serviceItem = [
       routeName: 'NearestMetro',
       params: {},
     },
+    icon: images.metroImg,
   },
   {
     label: strings.firstLastMetro,
     onPress: {
-      routeName: 'StationList',
+      routeName: 'FirstLastMetro',
       params: {},
     },
+    icon: images.clockImg,
   },
   {
     label: strings.onlineRecharge,
     onPress: {
-      routeName: 'StationList',
+      routeName: 'OnlineRecharge',
       params: {},
     },
+    icon: images.rechargeImg,
   },
 ];
 const cityList = [
@@ -841,6 +869,47 @@ export const getCity = {
   'Noida Metro': noidaStations,
   'Delhi Metro': delhiStations,
   'Kolkata Metro': kolkataStations,
+};
+
+export const generalInfo = {
+  links: [
+    {
+      label: 'https://www.delhimetrorail.com/',
+    },
+    {
+      label: 'https://nmrcnoida.com/',
+    },
+    {
+      label: 'https://mtp.indianrailways.gov.in/',
+    },
+    {
+      label: 'https://www.mmmocl.co.in/',
+    },
+    {
+      label: 'https://chennaimetrorail.org/',
+    },
+    {
+      label: 'https://www.lmrcl.com/',
+    },
+  ],
+  numbers: [
+    {
+      label: 'All Emergencies',
+      value: 108,
+    },
+    {
+      label: 'Police',
+      value: 100,
+    },
+    {
+      label: 'Fire',
+      value: 101,
+    },
+    {
+      label: 'Ambulance',
+      value: 102,
+    },
+  ],
 };
 
 export {

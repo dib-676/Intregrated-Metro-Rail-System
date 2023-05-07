@@ -14,4 +14,11 @@ export default {
   plus: require('../assets/images/plus.png'),
   minus: require('../assets/images/minus.png'),
   spashBGImg: require('../assets/images/SpashScreen.jpeg'),
+  dirImg: require('../assets/images/direction.png'),
+  supportImg: require('../assets/images/support.png'),
+  mapSearchImg: require('../assets/images/mapSearch.png'),
+  metroImg: require('../assets/images/metro.png'),
+  rechargeImg: require('../assets/images/recharge.png'),
+  clockImg: require('../assets/images/clock.png'),
+  warningImg: require('../assets/images/warning.png'),
 };

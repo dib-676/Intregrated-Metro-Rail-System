@@ -12,7 +12,7 @@ import {
   setDestination,
   setSource,
 } from '../../redux-toolkit/reducers/metroSlice';
-import {dimensions} from '../../utils';
+import {colors, dimensions} from '../../utils';
 import style from './style';
 const {vw, vh} = dimensions;
 
@@ -38,7 +38,7 @@ const CityDropDownList = ({route, navigation}: any) => {
     return <View style={style.itemSeparatorComponent}></View>;
   };
   return (
-    <SafeAreaView style={style.mainFrame}>
+    <TouchableOpacity style={style.mainFrame} onPress={() => navigation.pop()}>
       <TouchableOpacity style={style.close} onPress={() => navigation.pop()} />
       <FlatList
         scrollEnabled={false}
@@ -47,8 +47,11 @@ const CityDropDownList = ({route, navigation}: any) => {
         renderItem={({item}) => renderItem(item)}
         ItemSeparatorComponent={() => ItemSeparatorComponent()}
       />
-      <View style={{height: vh(700 - data.length * 30)}}></View>
-    </SafeAreaView>
+      <View
+        style={{
+          height: vh(700 - data.length * 30),
+        }}></View>
+    </TouchableOpacity>
   );
 };
 

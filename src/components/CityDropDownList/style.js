@@ -4,6 +4,7 @@ const {vw, vh} = dimensions;
 const style = StyleSheet.create({
   mainFrame: {
     flex: 1,
+    backgroundColor: colors.black30,
   },
   dropDown: {
     marginStart: vw(67),

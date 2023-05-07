@@ -1,0 +1,128 @@
+{
+    "stationList":[
+        {
+            "name":"adarsh nagar",
+            "line":["yellow"]
+        },
+        {
+            "name":"aiims",
+            "line":["yellow"]
+        },
+        {
+            "name":"airport",
+            "line":["orange"]
+        },
+        {
+            "name":"akshardham",
+            "line":["blue"]
+        },
+        {
+            "name":"anand vihar isbt",
+            "line":["blue","pink"]
+        },
+        {
+            "name":"arjan garh",
+            "line":["yellow"]
+        },
+        {
+            "name":"arthala",
+            "line":["red"]
+        },
+        {
+            "name":"ashok park main",
+            "line":["green"]
+        },
+        {
+            "name":"ashram",
+            "line":["pink"]
+        },
+        {
+            "name":"azadpur",
+            "line":["yellow","pink"]
+        },
+        {
+            "name":"badarpur border",
+            "line":["voilet"]
+        },
+        {
+            "name":"bahadurgarh city",
+            "line":["green"]
+        },
+        {
+            "name":"barakhamba road",
+            "line":["blue"]
+        },
+        {
+            "name":"bata chowk",
+            "line":["voilet"]
+        },
+        {
+            "name":"belvedere towers",
+            "line":["rmgl"]
+        },
+        {
+            "name":"bhikaji cama place",
+            "line":["pink"]
+        },
+        {
+            "name":"botanical garden",
+            "line":["blue","magenta"]
+        },
+        {
+            "name":"brig. hoshisar singh",
+            "line":["green"]
+        },
+        {
+            "name":"central secretariat",
+            "line":["yellow","voilet"]
+        },
+        {
+            "name":"chandni chowk",
+            "line":["yellow"]
+        },
+        {
+            "name":"chawri bazar",
+            "line":["yellow"]
+        },
+        {
+            "name":"chhatarpur",
+            "line":["yellow"]
+        },
+        {
+            "name":"chirag delhi",
+            "line":["magenta"]
+        },
+        {
+            "name":"civil lines",
+            "line":["yellow"]
+        },
+        {
+            "name":"cyber city",
+            "line":["rmgl"]
+        },
+        {
+            "name":"dabri mor-janakpuri south",
+            "line":["magenta"]
+        },
+        {
+            "name":"dashrathpuri",
+            "line":["magenta"]
+        },
+        {
+            "name":"delhi aerocity",
+            "line":["orange"]
+        },
+        {
+            "name":"delhi cantt",
+            "line":["pink"]
+        },
+        {
+            "name":"delhi gate",
+            "line":["pink"]
+        },
+        {
+            "name":"dhansa bus stand",
+            "line":["pink"]
+        }
+    ]
+}
