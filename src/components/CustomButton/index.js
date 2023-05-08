@@ -3,6 +3,7 @@ import style from './style';
 const CustomButton = (props: any) => {
   return (
     <TouchableOpacity
+      onPress={props?.onPress}
       style={{...style.btnContainer, ...props?.style?.btnContainer}}
       activeOpacity={0.8}>
       <Text style={{...style.btnTxt, ...props?.style?.btnTxt}}>

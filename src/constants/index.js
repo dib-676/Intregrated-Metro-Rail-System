@@ -1,5 +1,12 @@
 import {colors, images, strings} from '../utils';
 import {cities} from '../utils/strings';
+import {
+  calculateLines,
+  delhiMetroFareCalculator,
+  delhiStationList,
+  distanceMetroCalculator,
+  noidaMetroFareCalculator,
+} from '../screens/FareAndRouteCalculator/components/logic';
 
 const delhiStations = [
   {
@@ -912,6 +919,12 @@ export const generalInfo = {
   ],
 };
 
+const fareChart = {
+  ' Delhi Metro': () =>
+    delhiMetroFareCalculator(distanceMetroCalculator(delhiStationList())),
+  'Noida Metro': () => noidaMetroFareCalculator(calculateLines()),
+};
+
 export {
   delhiStations,
   noidaStations,
@@ -919,4 +932,5 @@ export {
   drawerComponents,
   serviceItem,
   cityList,
+  fareChart,
 };

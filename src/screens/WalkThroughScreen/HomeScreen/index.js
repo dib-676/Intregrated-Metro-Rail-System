@@ -1,4 +1,4 @@
-import {useLayoutEffect, useState} from 'react';
+import {useEffect, useLayoutEffect, useState} from 'react';
 import {
   View,
   Text,
@@ -13,7 +13,12 @@ import CustomDateTimePicker from '../../../components/CustomDateTimePicker';
 import style from './style';
 import SelectStation from '../SelectStation';
 import {homeScreenHeader} from '../../../routes/headers';
-import {cityList, drawerComponents, serviceItem} from '../../../constants';
+import {
+  cityList,
+  drawerComponents,
+  fareChart,
+  serviceItem,
+} from '../../../constants';
 import MetroServices from '../Metro Services';
 import CustomButton from '../../../components/CustomButton';
 import {
@@ -25,6 +30,7 @@ import {
   setReset,
   setSource,
 } from '../../../redux-toolkit/reducers/metroSlice';
+
 const delhiMetroLine = require('../../../constants/stationName/delhiMetro.json');
 const attributes = {
   needBottomBorder: true,
@@ -33,12 +39,14 @@ const attributes = {
   drawerEnabled: true,
   drawerComponents: drawerComponents,
 };
+
 const HomeScreen = ({navigation}) => {
   const {
     source,
     destination,
     location: curr_location,
     stationData,
+    city,
   } = useSelector(state => state.metroReducer);
   const dispatch = useDispatch();
   const [isLoad, setLoad] = useState(false);
@@ -53,16 +61,16 @@ const HomeScreen = ({navigation}) => {
     dist = distanceResolver(stationData, curr_location);
   }
 
+  const onPressFare = () => {
+    if (source != '' && destination != '') {
+      const fare = fareChart[city];
+      console.log(`fare === ${fare}`);
+    }
+  };
+
   const reset = () => {
     dispatch(setReset());
   };
-  console.log(
-    `delhiMetroLine =======> ${
-      delhiMetroLine.stationList.filter(val => {
-        return val.name == 'azadpur';
-      })[0].line
-    }`,
-  );
 
   return (
     <SafeAreaView style={style.mainFrame}>
@@ -109,7 +117,10 @@ const HomeScreen = ({navigation}) => {
           />
         </View>
 
-        <CustomButton label={strings.show_route_and_fare} />
+        <CustomButton
+          label={strings.show_route_and_fare}
+          onPress={() => onPressFare()}
+        />
 
         <View style={style.bottomPart}>
           <MetroServices

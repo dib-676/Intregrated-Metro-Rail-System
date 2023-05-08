@@ -1,6 +1,7 @@
 import {useSelector} from 'react-redux';
 import {useGetRoutePathQuery} from '../../../redux-toolkit/api/metroRouteApi';
 import {useGetDistanceByNameQuery} from '../../../redux-toolkit/api/metroApi';
+import {noidaStations} from '../../../constants';
 
 export const delhiStationList = () => {
   const {source, destination} = useSelector((state: any) => state.metroReducer);
@@ -8,6 +9,7 @@ export const delhiStationList = () => {
     source: source,
     destination: destination,
   });
+  console.log('stationList', data);
   return data;
 };
 
@@ -24,7 +26,7 @@ export const distanceMetroCalculator = (list: any) => {
     const res = distanceUtilCalculator(location);
     dist += parseFloat(res.substring(0, res.length - 2));
   }
-  return parseInt(dist);
+  return dist;
 };
 
 export const delhiMetroFareCalculator = (dist: any) => {
@@ -44,7 +46,14 @@ export const delhiMetroFareCalculator = (dist: any) => {
 };
 
 export const calculateLines = () => {
-  return null;
+  const {source, destination} = useSelector((state: any) => state.metroReducer);
+  let x1 = noidaStations.filter((val: any) => {
+    return val.name == source;
+  })[0].serial;
+  let x2 = noidaStations.filter((val: any) => {
+    return val.name == destination;
+  })[0].serial;
+  return Math.abs(x1 - x2);
 };
 
 export const noidaMetroFareCalculator = (lines: any) => {
