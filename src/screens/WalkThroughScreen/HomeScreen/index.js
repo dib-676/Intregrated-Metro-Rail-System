@@ -30,6 +30,7 @@ import {
   setReset,
   setSource,
 } from '../../../redux-toolkit/reducers/metroSlice';
+import {delhiStationList} from '../../FareAndRouteCalculator/components/logic';
 
 const delhiMetroLine = require('../../../constants/stationName/delhiMetro.json');
 const attributes = {
@@ -61,10 +62,10 @@ const HomeScreen = ({navigation}) => {
     dist = distanceResolver(stationData, curr_location);
   }
 
-  const onPressFare = () => {
+  const onPressFare = async () => {
     if (source != '' && destination != '') {
-      const fare = fareChart[city];
-      console.log(`fare === ${fare}`);
+      const fare = await delhiStationList({source, destination});
+      console.log(`fare === ${JSON.parse(fare)}`);
     }
   };
 

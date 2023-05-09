@@ -920,9 +920,9 @@ export const generalInfo = {
 };
 
 const fareChart = {
-  ' Delhi Metro': () =>
-    delhiMetroFareCalculator(distanceMetroCalculator(delhiStationList())),
-  'Noida Metro': () => noidaMetroFareCalculator(calculateLines()),
+  ' Delhi Metro': delhiStationList,
+  // delhiMetroFareCalculator(distanceMetroCalculator(delhiStationList())),
+  // 'Noida Metro': () => noidaMetroFareCalculator(calculateLines()),
 };
 
 export {

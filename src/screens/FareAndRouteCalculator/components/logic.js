@@ -2,30 +2,50 @@ import {useSelector} from 'react-redux';
 import {useGetRoutePathQuery} from '../../../redux-toolkit/api/metroRouteApi';
 import {useGetDistanceByNameQuery} from '../../../redux-toolkit/api/metroApi';
 import {noidaStations} from '../../../constants';
+import {
+  API_KEY,
+  BASE_URL,
+  PRIMARY_URL,
+  fetchBaseUrl,
+  fetchUrl,
+} from '../../../redux-toolkit/api/axiosConfig';
 
-export const delhiStationList = () => {
-  const {source, destination} = useSelector((state: any) => state.metroReducer);
-  const {data} = useGetRoutePathQuery({
-    source: source,
-    destination: destination,
+export const delhiStationList = async ({source, destination}) => {
+  console.log('delhiStationList');
+  const url = `${BASE_URL}route-get?from=${source}&to=${destination}`;
+  const data = await fetchUrl
+    .get(url, {
+      method: 'get',
+    })
+    .then(response => JSON.stringify(response))
+    .catch(error => console.log(error));
+  const res = JSON.parse(data);
+  const dist = distanceMetroCalculator(res?.data);
+  console.log('stationList', res?.data);
+  return data;
+};
+
+export const distanceUtilCalculator = async (location: any) => {
+  console.log(location);
+  const metroKeyword = 'Metro Station';
+  const url = `${PRIMARY_URL}/distancematrix/json?units=metric&origins=${location.source} ${metroKeyword} &destinations=${location.destination} ${metroKeyword}&key=${API_KEY}`;
+  const data = await fetchBaseUrl(url, {
+    method: 'get',
   });
-  console.log('stationList', data);
-  return data;
+  // const {data} = useGetDistanceByNameQuery(location);
+  console.log('distance', data?.data?.rows[0]?.elements[0]?.distance?.text);
+  return data?.data?.rows[0]?.elements[0]?.distance?.text;
 };
 
-export const distanceUtilCalculator = (location: any) => {
-  const {data} = useGetDistanceByNameQuery(location);
-  console.log('distance', data);
-  return data;
-};
-
-export const distanceMetroCalculator = (list: any) => {
+export const distanceMetroCalculator = async (list: any) => {
   var dist = 0.0;
   for (let i = 0; i < list.path.length - 1; i++) {
     const location = {source: list.path[i], destination: list.path[i + 1]};
-    const res = distanceUtilCalculator(location);
+    const res = await distanceUtilCalculator(location);
+    console.log('res', res);
     dist += parseFloat(res.substring(0, res.length - 2));
   }
+  console.log('dist', dist);
   return dist;
 };
 
