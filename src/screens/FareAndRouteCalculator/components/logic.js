@@ -25,43 +25,15 @@ export const delhiStationList = async ({source, destination}) => {
   return data;
 };
 
-export const distanceUtilCalculator = async (location: any) => {
-  console.log(location);
-  const metroKeyword = 'Metro Station';
-  const url = `${PRIMARY_URL}/distancematrix/json?units=metric&origins=${location.source} ${metroKeyword} &destinations=${location.destination} ${metroKeyword}&key=${API_KEY}`;
-  const data = await fetchBaseUrl(url, {
-    method: 'get',
-  });
-  // const {data} = useGetDistanceByNameQuery(location);
-  console.log('distance', data?.data?.rows[0]?.elements[0]?.distance?.text);
-  return data?.data?.rows[0]?.elements[0]?.distance?.text;
-};
-
-export const distanceMetroCalculator = async (list: any) => {
-  var dist = 0.0;
-  for (let i = 0; i < list.path.length - 1; i++) {
-    const location = {source: list.path[i], destination: list.path[i + 1]};
-    const res = await distanceUtilCalculator(location);
-    console.log('res', res);
-    dist += parseFloat(res.substring(0, res.length - 2));
-  }
-  console.log('dist', dist);
-  return dist;
-};
-
-export const delhiMetroFareCalculator = (dist: any) => {
-  if (dist > 0 && dist <= 2) {
-    return {normal: 10, special: 10};
-  } else if (dist > 2 && dist <= 5) {
-    return {normal: 20, special: 10};
-  } else if (dist > 5 && dist <= 12) {
-    return {normal: 30, special: 20};
-  } else if (dist < 12 && dist <= 21) {
-    return {normal: 40, special: 30};
-  } else if (dist > 21 && dist <= 32) {
-    return {normal: 50, special: 40};
-  } else {
-    return {normal: 60, special: 50};
+export const delhiMetroFareCalculator = ({source, destination}) => {
+  try {
+    const fareChart = require('../../../constants/stationName/delhiMetroFare.json');
+    const fareInt = fareChart.route.filter(val => val.source == source)[0]
+      .destination;
+    const fare = fareInt.filter(val => val.destination == destination)[0].fare;
+    return fare;
+  } catch (error) {
+    return 'Unable fetch Fare.';
   }
 };
 
