@@ -31,13 +31,13 @@ const StationDashboard = ({navigation}: any) => {
           onBackPress={() => navigation.goBack()}
           label={stationName}
         />
-        <StationServiceAlert data={serviceLineData.lineNumber} />
+        {/* <StationServiceAlert data={serviceLineData.lineNumber} />
         <StationMapView
           lat={serviceLineData.details.lat}
           long={serviceLineData.details.long}
           name={serviceLineData.name}
         />
-        <StationAbtractDetail data={serviceLineData.details.otherDetails} />
+        <StationAbtractDetail data={serviceLineData.details.otherDetails} /> */}
       </ScrollView>
       <View style={style.footerScreen}>
         <StationFooter data={[]} />

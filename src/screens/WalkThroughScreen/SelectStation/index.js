@@ -4,6 +4,7 @@ import {images} from '../../../utils';
 import {
   setDestination,
   setSource,
+  setSwipeStation,
 } from '../../../redux-toolkit/reducers/metroSlice';
 import style from './style';
 const SelectStation = (props: any) => {
@@ -14,15 +15,21 @@ const SelectStation = (props: any) => {
         icon={images.openCircle}
         stationName={props.source}
         navigation={() =>
-          props.navigation.navigate('StationList', {searchType: 'Depart From'})
+          props.navigation.navigate('StationList', {
+            callback: props.type,
+            searchType: 'Depart From',
+          })
         }
       />
       <TouchableOpacity
         activeOpacity={0.9}
         style={style.flipView}
         onPress={() => {
-          props.dispatch(setSource(props.destination)),
-            props.dispatch(setDestination(props.source));
+          props.dispatch(
+            setSwipeStation({
+              type: props.type === 'firstLast' ? props.type : '',
+            }),
+          );
         }}>
         <Image source={images.exchange} style={style.flip} />
       </TouchableOpacity>
@@ -31,7 +38,10 @@ const SelectStation = (props: any) => {
         icon={images.closeCircle}
         stationName={props.destination}
         navigation={() =>
-          props.navigation.navigate('StationList', {searchType: 'Destination'})
+          props.navigation.navigate('StationList', {
+            callback: props.type,
+            searchType: 'Destination',
+          })
         }
       />
     </View>

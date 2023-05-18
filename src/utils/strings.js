@@ -16,6 +16,14 @@ export default {
   lift_escalator: 'Lift/Escalator Available',
   moreInfo: 'For more Information on Visit this link:',
   emptyNearestMetro: 'No Nearest Metro Station',
+  short_route: 'Shortest Route',
+  min_route: 'Min. Interchange',
+  recommend: 'Recommended',
+  fare: 'Fare',
+  station: 'Station',
+  interchange: 'InterChange',
+  firstLastMetroDisclamer:
+    'Use this search to find the First and Last Train from any source station to any destination station.',
 };
 export const cities = {
   delhiMetro: 'Delhi Metro',

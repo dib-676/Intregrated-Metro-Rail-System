@@ -33,10 +33,9 @@ import {
 import {
   delhiMetroFareCalculator,
   delhiStationList,
-  fetchRoute,
 } from '../../FareAndRouteCalculator/components/logic';
+import Toast from 'react-native-simple-toast';
 
-const delhiMetroLine = require('../../../constants/stationName/delhiMetro.json');
 const attributes = {
   needBottomBorder: true,
   icon: images.metroLogo,
@@ -49,6 +48,8 @@ const HomeScreen = ({navigation}) => {
   const {
     source,
     destination,
+    source_stCode,
+    destination_stCode,
     location: curr_location,
     stationData,
     city,
@@ -57,6 +58,8 @@ const HomeScreen = ({navigation}) => {
   const [isLoad, setLoad] = useState(false);
   const [date, setDate] = useState(new Date().toLocaleDateString());
   const [time, setTime] = useState(new Date().toLocaleTimeString());
+  const [fare, setFare] = useState(0);
+  const [day, setDay] = useState(new Date().getDay());
   useLayoutEffect(() => {
     homeScreenHeader({navigation, attributes});
   }, []);
@@ -67,18 +70,19 @@ const HomeScreen = ({navigation}) => {
   }
 
   const onPressFare = async () => {
-    if (source != '' && destination != '') {
-      // const fare = await delhiStationList({source, destination});
-      // console.log(`fare === ${JSON.parse(fare)}`);
-      // fetchRoute();
-      console.log(delhiMetroFareCalculator({source, destination}));
+    if (source !== '' && destination === '') {
+      Toast.show('Please Select Destination');
+    } else if (source === '' && destination !== '') {
+      Toast.show('Please Select Source');
+    } else if (source !== '' && destination !== '') {
+      navigation.navigate('FareAndRoute', {day: day});
     }
   };
 
   const reset = () => {
     dispatch(setReset());
   };
-
+  console.log(`day === ${day}`);
   return (
     <SafeAreaView style={style.mainFrame}>
       <ScrollView
@@ -115,6 +119,7 @@ const HomeScreen = ({navigation}) => {
             value={date}
             response={setDate}
             icon={images.date}
+            day={setDay}
           />
           <CustomDateTimePicker
             mode={strings.modeTime}

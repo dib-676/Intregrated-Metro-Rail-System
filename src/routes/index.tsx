@@ -12,6 +12,7 @@ import {
   GeneralInfo,
   OnlineRecharge,
   FirstLastMetro,
+  FareAndRoute,
 } from '../screens';
 import {useEffect} from 'react';
 import Geolocation from '@react-native-community/geolocation';
@@ -95,6 +96,14 @@ const HomeScreenStack = () => {
         <HomeStack.Screen
           name="FirstLastMetro"
           component={FirstLastMetro}
+          options={{
+            // headerShown: false,
+            headerTitle: 'First & Last Metro',
+          }}
+        />
+        <HomeStack.Screen
+          name="FareAndRoute"
+          component={FareAndRoute}
           options={{
             // headerShown: false,
             headerTitle: 'First & Last Metro',

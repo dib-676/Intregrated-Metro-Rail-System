@@ -1,65 +1,148 @@
-import {useSelector} from 'react-redux';
-import {useGetRoutePathQuery} from '../../../redux-toolkit/api/metroRouteApi';
-import {useGetDistanceByNameQuery} from '../../../redux-toolkit/api/metroApi';
-import {noidaStations} from '../../../constants';
-import {
-  API_KEY,
-  BASE_URL,
-  PRIMARY_URL,
-  fetchBaseUrl,
-  fetchUrl,
-} from '../../../redux-toolkit/api/axiosConfig';
+import {kolkataStations, noidaStations} from '../../../constants';
+import {API_BASE_URL, fetchUrl} from '../../../redux-toolkit/api/axiosConfig';
 
-export const delhiStationList = async ({source, destination}) => {
-  console.log('delhiStationList');
-  const url = `${BASE_URL}route-get?from=${source}&to=${destination}`;
-  const data = await fetchUrl
-    .get(url, {
-      method: 'get',
-    })
-    .then(response => JSON.stringify(response))
-    .catch(error => console.log(error));
-  const res = JSON.parse(data);
-  const dist = distanceMetroCalculator(res?.data);
-  console.log('stationList', res?.data);
-  return data;
-};
-
-export const delhiMetroFareCalculator = ({source, destination}) => {
+export const delhiMetroFareCalculator = ({
+  source,
+  destination,
+  value,
+  setFare,
+  setTime,
+  setInterchange,
+  setStation,
+  setRoute,
+}) => {
+  console.log(source, destination);
   try {
-    const fareChart = require('../../../constants/stationName/delhiMetroFare.json');
-    const fareInt = fareChart.route.filter(val => val.source == source)[0]
-      .destination;
-    const fare = fareInt.filter(val => val.destination == destination)[0].fare;
-    return fare;
+    const url = `${API_BASE_URL}/new_fare_with_route/${source}/${destination}/${value}`;
+    fetchUrl
+      .get(url, {
+        method: 'get',
+      })
+      .then(response => {
+        setFare({
+          weekday_fare: response.data.weekday_fare,
+          weekend_fare: response.data.weekend_fare,
+        });
+        const time = response.data.total_time.split(':');
+        const hour = parseInt(time[0]) * 60;
+        const min = parseInt(time[1]);
+        setTime((hour + min).toString());
+        setStation(response.data.stations);
+        setInterchange(response.data.route.length - 1);
+        console.log(response.data.route);
+        setRoute(response.data.route);
+      })
+      .catch(error => console.log(error));
   } catch (error) {
-    return 'Unable fetch Fare.';
+    console.log(error);
   }
 };
 
-export const calculateLines = () => {
-  const {source, destination} = useSelector((state: any) => state.metroReducer);
+export const calculateNoidaMetroFare = ({
+  source,
+  destination,
+  setFare,
+  setTime,
+  setInterchange,
+  setStation,
+  setRoute,
+}) => {
   let x1 = noidaStations.filter((val: any) => {
-    return val.name == source;
+    return val.station_code == source;
   })[0].serial;
   let x2 = noidaStations.filter((val: any) => {
-    return val.name == destination;
+    return val.station_code == destination;
   })[0].serial;
-  return Math.abs(x1 - x2);
+  const fare = calculateNoidaMetroFareUtil(Math.abs(x1 - x2));
+  setFare(fare);
+  setStation(Math.abs(x1 - x2) + 1);
+  setInterchange(0);
+  const line = Math.abs(x1 - x2);
+  const time = line * 3 + parseInt(line / 2);
+  setTime(time);
+  const start = x1 - x2 > 0 ? x2 : x1;
+  const end = x1 - x2 > 0 ? x1 : x2;
+  console.log(x1, x2, start, end);
+  const route = [
+    {
+      line: 'Aqua Line',
+      path: noidaStations
+        .slice(start, end + 1)
+        .map(val => ({name: val.station_name, status: ''})),
+      path_time: '0:' + time.toString() + ':0',
+      start: 'NOIDA SEC-51',
+      station_interchange_time: 0,
+      towards_station: 'Delport',
+    },
+  ];
+  console.log(route);
+  setRoute(route);
 };
 
-export const noidaMetroFareCalculator = (lines: any) => {
+export const calculateNoidaMetroFareUtil = lines => {
   if (lines === 1) {
-    return {normal: 10, special: 10};
+    return {weekday_fare: 10, weekend_fare: 10};
   } else if (lines === 2) {
-    return {normal: 15, special: 10};
+    return {weekday_fare: 15, weekend_fare: 10};
   } else if (lines >= 3 && lines <= 6) {
-    return {normal: 20, special: 15};
+    return {weekday_fare: 20, weekend_fare: 15};
   } else if (lines >= 7 && lines <= 9) {
-    return {normal: 30, special: 20};
+    return {weekday_fare: 30, weekend_fare: 20};
   } else if (lines >= 10 && lines <= 16) {
-    return {normal: 40, special: 30};
+    return {weekday_fare: 40, weekend_fare: 30};
   } else {
-    return {normal: 50, special: 40};
+    return {weekday_fare: 50, weekend_fare: 40};
+  }
+};
+
+export const calculateKolkataMetroFare = ({
+  source,
+  destination,
+  setFare,
+  setStation,
+  setInterchange,
+  setTime,
+  setRoute,
+}) => {
+  let x1 = kolkataStations.filter((val: any) => {
+    return val.station_code == source;
+  })[0].serial;
+  let x2 = kolkataStations.filter((val: any) => {
+    return val.station_code == destination;
+  })[0].serial;
+  const fare = calculateKolkataMetroFareUtil(Math.abs(x1 - x2));
+  setFare(fare);
+  setStation(Math.abs(x1 - x2) + 1);
+  setInterchange(0);
+  const line = Math.abs(x1 - x2);
+  const time = parseInt(line * 1.7685 + line / 2);
+  setTime(time);
+  const route = [
+    {
+      line: 'Blue Line',
+      path: kolkataStations
+        .slice(x1, x2 + 1)
+        .map(val => ({name: val.station_name, status: ''})),
+      path_time: '0:' + time.toString() + ':0',
+      start: 'KAVI SUBHASH',
+      station_interchange_time: 0,
+      towards_station: 'DAKSHINESWAR',
+    },
+  ];
+  console.log(route);
+  setRoute(route);
+};
+
+export const calculateKolkataMetroFareUtil = lines => {
+  if (lines === 1) {
+    return {weekday_fare: 5, weekend_fare: 5};
+  } else if (lines >= 2 && lines <= 7) {
+    return {weekday_fare: 10, weekend_fare: 5};
+  } else if (lines >= 8 && lines <= 13) {
+    return {weekday_fare: 15, weekend_fare: 10};
+  } else if (lines >= 14 && lines <= 19) {
+    return {weekday_fare: 20, weekend_fare: 15};
+  } else {
+    return {weekday_fare: 25, weekend_fare: 20};
   }
 };

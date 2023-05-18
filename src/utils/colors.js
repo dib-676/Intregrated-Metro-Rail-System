@@ -46,9 +46,13 @@ export default {
   lightBlue: 'rgba(173,200,255,1)',
   lightOrange: 'rgba(265,190,0,1)',
   lightPink: 'rgba(255,180,255,1)',
+  lightMaganta: 'rgba(255,0,255,1)',
+  lightVoilet: 'rgba(127,0,255,1)',
+  lightRMGL: 'rgba(0,51,51,1)',
+  lightPurple: 'rgba(160, 32, 240,1)',
   red: 'rgba(255,0,0,1)',
   aqua: 'aqua',
   backgroundColor: 'rgba(231, 233, 237, 1)',
-
+  voilet: 'voilet',
   green: 'green',
 };

@@ -21,4 +21,5 @@ export default {
   rechargeImg: require('../assets/images/recharge.png'),
   clockImg: require('../assets/images/clock.png'),
   warningImg: require('../assets/images/warning.png'),
+  fareImg: require('../assets/images/fare.png'),
 };

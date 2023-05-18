@@ -1,5 +1,6 @@
 import CityDropDownList from '../components/CityDropDownList';
 import StationList from '../components/StationDropDownList';
+import FareAndRoute from './FareAndRouteCalculator';
 import FirstLastMetro from './FirstLastMetro';
 import GeneralInfo from './General Information';
 import NearestMetro from './NearestMetro/NMDashBoard';
@@ -8,7 +9,6 @@ import SplashScreen from './SplashScreen';
 import StationDashboard from './StationDetail/StationDashboard';
 import DrawerScreen from './WalkThroughScreen/DrawerScreen';
 import HomeScreen from './WalkThroughScreen/HomeScreen';
-
 export {
   CityDropDownList,
   StationList,
@@ -20,4 +20,5 @@ export {
   GeneralInfo,
   OnlineRecharge,
   FirstLastMetro,
+  FareAndRoute,
 };

@@ -11,10 +11,11 @@ const CustomDateTimePicker = (props: any) => {
     setVisible(false);
   };
   const handleConfirm = (response: any) => {
-    props.mode == 'date'
+    props.mode === 'date'
       ? props.response(response.toLocaleDateString())
       : props.response(response.toLocaleTimeString());
     hideModel();
+    props.mode === 'date' && props.day(response.getDay());
   };
   return (
     <>

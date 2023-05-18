@@ -26,8 +26,8 @@ const CityDropDownList = ({route, navigation}: any) => {
         style={style.item}
         onPress={() => {
           dispatch(setCity(item.name));
-          dispatch(setSource(''));
-          dispatch(setDestination(''));
+          dispatch(setSource({station_name: '', station_code: ''}));
+          dispatch(setDestination({station_name: '', station_code: ''}));
           navigation.pop();
         }}>
         {item.name}

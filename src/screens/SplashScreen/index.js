@@ -27,7 +27,7 @@ const SplashScreen = ({navigation}: any) => {
 
   useEffect(() => {
     if (seconds == 4) {
-      navigation.navigate('Home');
+      navigation.replace('Home');
     }
   });
   return (
