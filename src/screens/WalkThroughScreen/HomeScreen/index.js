@@ -75,7 +75,7 @@ const HomeScreen = ({navigation}) => {
     } else if (source === '' && destination !== '') {
       Toast.show('Please Select Source');
     } else if (source !== '' && destination !== '') {
-      navigation.navigate('FareAndRoute', {day: day});
+      navigation.navigate('FareAndRoute', {day: day, value:'least-distance'});
     }
   };
 
