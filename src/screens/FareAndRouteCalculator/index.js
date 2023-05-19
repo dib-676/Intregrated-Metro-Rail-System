@@ -12,7 +12,7 @@ const FareAndRoute = props => {
   const {city, source_stCode, destination_stCode} = useSelector(
     state => state.metroReducer,
   );
-  const {day} = props.route.params;
+  const {day,value} = props.route.params;
   const [chipState, setChipState] = useState(0);
   const [fare, setFare] = useState({});
   const [time, setTime] = useState('');
@@ -23,7 +23,8 @@ const FareAndRoute = props => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    calculateFare('least-distance');
+//     calculateFare('least-distance');
+    calculateFare(value);
   }, []);
 
   const calculateFare = useCallback(value => {
