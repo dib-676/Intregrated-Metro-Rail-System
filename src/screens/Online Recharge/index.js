@@ -16,12 +16,19 @@ const OnlineRecharge = () => {
   const LoadingIndicatorView = () => {
     return <ActivityIndicator color="#009b88" size="large" />;
   };
+  const onMessage = (m: any)=>{
+    const paymentDetails = JSON.parse(m);
+    console.log('Payment Details', m);
+  };
   return (
     <SafeAreaView style={style.mainFrame}>
       <WebView
         originWhitelist={['*']}
         source={{uri: url[city]}}
         renderLoading={LoadingIndicatorView}
+         javaScriptEnabledAndroid
+         javaScriptEnabled
+         onMessage={onMessage}
         startInLoadingState={true}
       />
     </SafeAreaView>
