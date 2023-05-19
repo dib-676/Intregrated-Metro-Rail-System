@@ -13,7 +13,7 @@ const FareAndRoute = props => {
     state => state.metroReducer,
   );
   const {day,value} = props.route.params;
-  const [chipState, setChipState] = useState(0);
+  const [chipState, setChipState] = useState(value==='least-distance'?0:1);
   const [fare, setFare] = useState({});
   const [time, setTime] = useState('');
   const [station, setStation] = useState('');
