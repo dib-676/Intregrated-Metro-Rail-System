@@ -1041,10 +1041,6 @@ const drawerComponents = [
     },
   },
   {
-    name: 'Tokens and Smart Card',
-    fileName: '',
-  },
-  {
     name: 'General Information',
     onPress: {
       routeName: 'GeneralInfo',
@@ -1207,6 +1203,95 @@ const calculateFareByCity = {
   'Noida Metro': calculateFLMNoida,
   'Kolkata Metro': calculateFLMKolkata,
 };
+
+const lost_and_found = [
+  {
+    label: 'Instructions to collect lost articles',
+    instructions: [
+      {
+        serialNo: 1,
+        label:
+          'Visit customer care centre of nearby station within 48 hours. After 48 hours, contact Lost & Found office as mentioned below.',
+      },
+      {
+        serialNo: 2,
+        label:
+          'Photocopy of any ID proof (having address) along with original is mandatory to collect articles.',
+      },
+      {
+        serialNo: 3,
+        label:
+          'If the lost articles are not claimed within one month (for DMRC , NMRC, KMRC, MMRC, CMRC)',
+      },
+    ],
+  },
+  {
+    label: 'DMRC',
+    details: [
+      {
+        label: 'Please contact',
+        data: [
+          'Lost & Found office',
+          'Concourse level, below platform no. 03',
+          'Kashmere Gate Metro Station',
+          'Contact Number - Mobile - 8527405555',
+          'Land line - 011-23417910, Extn: 113701',
+        ],
+      },
+      {
+        label: 'Office Timing',
+        data: [
+          'Timing from 08:00 AM - 08:00 PM ( Except on Sunday',
+          'all National and Gazetted Holiday.',
+        ],
+      },
+    ],
+  },
+  {
+    label: 'NMRC',
+    details: [
+      {
+        label: 'Please contact',
+        data: [
+          'Lost & Found office',
+          'Concourse level, below platform no. 03',
+          'Kashmere Gate Metro Station',
+          'Contact Number - Mobile - 8527405555',
+          'Land line - 011-23417910, Extn: 113701',
+        ],
+      },
+      {
+        label: 'Office Timing',
+        data: [
+          'Timing from 08:00 AM - 08:00 PM ( Except on Sunday',
+          'all National and Gazetted Holiday.',
+        ],
+      },
+    ],
+  },
+  {
+    label: 'KMRC',
+    details: [
+      {
+        label: 'Please contact',
+        data: [
+          'Lost & Found office',
+          'Concourse level, below platform no. 03',
+          'Kashmere Gate Metro Station',
+          'Contact Number - Mobile - 8527405555',
+          'Land line - 011-23417910, Extn: 113701',
+        ],
+      },
+      {
+        label: 'Office Timing',
+        data: [
+          'Timing from 08:00 AM - 08:00 PM ( Except on Sunday',
+          'all National and Gazetted Holiday.',
+        ],
+      },
+    ],
+  },
+];
 
 const fareRouteLineColor: any = {
   'Violet Line': colors.lightVoilet,

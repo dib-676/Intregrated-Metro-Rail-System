@@ -3,6 +3,7 @@ import StationList from '../components/StationDropDownList';
 import FareAndRoute from './FareAndRouteCalculator';
 import FirstLastMetro from './FirstLastMetro';
 import GeneralInfo from './General Information';
+import MetroMapView from './MapView';
 import NearestMetro from './NearestMetro/NMDashBoard';
 import OnlineRecharge from './Online Recharge';
 import SplashScreen from './SplashScreen';
@@ -21,4 +22,5 @@ export {
   OnlineRecharge,
   FirstLastMetro,
   FareAndRoute,
+  MetroMapView,
 };

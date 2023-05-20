@@ -27,7 +27,6 @@ const style = StyleSheet.create({
   radioView: {
     flexDirection: 'row',
     alignItems: 'center',
-    // borderWidth: 1,
     height: vh(50),
     paddingStart: vw(10),
   },

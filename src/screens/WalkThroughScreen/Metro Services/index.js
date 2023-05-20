@@ -25,6 +25,7 @@ const MetroServices = (props: any) => {
   };
   return (
     <FlatList
+      style={{alignSelf: 'center'}}
       data={data}
       scrollEnabled={false}
       numColumns={2}

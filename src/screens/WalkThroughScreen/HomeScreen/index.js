@@ -6,6 +6,7 @@ import {
   ScrollView,
   TouchableOpacity,
   RefreshControl,
+  ImageBackground,
 } from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 import {colors, images, strings} from '../../../utils';
@@ -35,6 +36,9 @@ import {
   delhiStationList,
 } from '../../FareAndRouteCalculator/components/logic';
 import Toast from 'react-native-simple-toast';
+import RadioButton from '../../../components/RadioButton';
+import AdvanceFilter from '../AdvanceFilter';
+import MetroMap from '../../MetroMap';
 
 const attributes = {
   needBottomBorder: true,
@@ -58,31 +62,38 @@ const HomeScreen = ({navigation}) => {
   const [isLoad, setLoad] = useState(false);
   const [date, setDate] = useState(new Date().toLocaleDateString());
   const [time, setTime] = useState(new Date().toLocaleTimeString());
-  const [fare, setFare] = useState(0);
+  const [value, setValue] = useState('least-distance');
   const [day, setDay] = useState(new Date().getDay());
   useLayoutEffect(() => {
     homeScreenHeader({navigation, attributes});
   }, []);
 
-  var dist;
+  let dist;
   if (stationData.length > 0) {
     dist = distanceResolver(stationData, curr_location);
   }
 
-  const onPressFare = async () => {
-    if (source !== '' && destination === '') {
+  const onPressFare = async value => {
+    if (source === '' && destination === '') {
+      Toast.show('Please Select Source');
+    } else if (source !== '' && destination === '') {
       Toast.show('Please Select Destination');
     } else if (source === '' && destination !== '') {
       Toast.show('Please Select Source');
     } else if (source !== '' && destination !== '') {
-      navigation.navigate('FareAndRoute', {day: day, value:'least-distance'});
+      navigation.navigate('FareAndRoute', {day: day, value: value});
     }
   };
 
   const reset = () => {
     dispatch(setReset());
   };
+  const handleAction = () => {
+    console.log('1');
+    navigation.navigate('MetroMapView');
+  };
   console.log(`day === ${day}`);
+  console.log(`Advance Filters === ${value}`);
   return (
     <SafeAreaView style={style.mainFrame}>
       <ScrollView
@@ -129,9 +140,11 @@ const HomeScreen = ({navigation}) => {
           />
         </View>
 
+        <AdvanceFilter setValue={setValue} />
+
         <CustomButton
           label={strings.show_route_and_fare}
-          onPress={() => onPressFare()}
+          onPress={() => onPressFare(value)}
         />
 
         <View style={style.bottomPart}>
@@ -139,6 +152,12 @@ const HomeScreen = ({navigation}) => {
             data={serviceItem}
             navigation={navigation}
             nearestStation={dist}
+          />
+          <MetroMap
+            city={city}
+            style={style.metroMap}
+            icon={{icon: images.metroMapImg, style: style.metroMapImg}}
+            handleAction={handleAction}
           />
         </View>
       </ScrollView>

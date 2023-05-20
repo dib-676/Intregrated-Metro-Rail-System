@@ -45,8 +45,25 @@ const style = StyleSheet.create({
     fontSize: vw(15),
   },
   bottomPart: {
-    marginHorizontal: vh(16),
-    marginVertical: vw(40),
+    paddingVertical: vw(20),
+    borderTopLeftRadius: vw(10),
+    borderTopRightRadius: vw(10),
+    marginTop: vw(40),
+    backgroundColor: colors.black06,
+  },
+  metroMap: {
+    marginTop: vw(10),
+    width: vw(328),
+    height: vh(110),
+    borderRadius: vw(8),
+    backgroundColor: colors.black20,
+    alignSelf: 'center',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  metroMapImg: {
+    alignSelf: 'center',
+    height: vw(70),
   },
 });
 export default style;

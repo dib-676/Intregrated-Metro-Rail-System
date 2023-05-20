@@ -24,6 +24,7 @@ export default {
   interchange: 'InterChange',
   firstLastMetroDisclamer:
     'Use this search to find the First and Last Train from any source station to any destination station.',
+  advanceFilter: 'Advance Filters',
 };
 export const cities = {
   delhiMetro: 'Delhi Metro',

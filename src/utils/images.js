@@ -22,4 +22,7 @@ export default {
   clockImg: require('../assets/images/clock.png'),
   warningImg: require('../assets/images/warning.png'),
   fareImg: require('../assets/images/fare.png'),
+  metroMapImg: require('../assets/images/metroMapLogo.png'),
+  walkThroughImg: require('../assets/images/WalkThroughBGImg.jpeg'),
+  metroGMapImg: require('../assets/images/metroMap.jpeg'),
 };
