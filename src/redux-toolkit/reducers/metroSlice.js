@@ -14,14 +14,6 @@ const initialState = {
   stationData: [],
   location: {},
 };
-const iniState = {
-  city: 'Delhi Metro',
-  source: '',
-  destination: '',
-  stationName: '',
-  stationData: [],
-  location: {},
-};
 export const metroSlice = createSlice({
   name: 'startScreen',
   initialState,
