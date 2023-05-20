@@ -1,11 +1,12 @@
-import {ActivityIndicator, SafeAreaView} from 'react-native';
+import {ActivityIndicator, SafeAreaView, Text} from 'react-native';
 import style from './style';
 import WebView from 'react-native-webview';
 import {useSelector} from 'react-redux';
+import {strings} from '../../utils';
 
 const OnlineRecharge = () => {
   const {city} = useSelector((state: any) => state.metroReducer);
-  const url = {
+  const url: any = {
     'Delhi Metro': 'https://www.dmrcsmartcard.com/',
     'Noida Metro': 'https://transit.sbi/swift/customerportal?pagename=nmrc',
     'Kolkata Metro': 'https://mtp.indianrailways.gov.in/',
@@ -14,9 +15,23 @@ const OnlineRecharge = () => {
     'Lucknow Metro': 'https://transit.sbi/swift/customerportal?pagename=kanpur',
   };
   const LoadingIndicatorView = () => {
-    return <ActivityIndicator color="#009b88" size="large" />;
+    return (
+      <>
+        <ActivityIndicator
+          color="#009b88"
+          size="large"
+          style={{...style.indicator}}
+        />
+        <Text
+          style={{
+            ...style.indicatorTxt,
+          }}>
+          {strings.loadingContent}
+        </Text>
+      </>
+    );
   };
-  const onMessage = (m: any)=>{
+  const onMessage = (m: any) => {
     const paymentDetails = JSON.parse(m);
     console.log('Payment Details', m);
   };
@@ -26,9 +41,9 @@ const OnlineRecharge = () => {
         originWhitelist={['*']}
         source={{uri: url[city]}}
         renderLoading={LoadingIndicatorView}
-         javaScriptEnabledAndroid
-         javaScriptEnabled
-         onMessage={onMessage}
+        javaScriptEnabledAndroid
+        javaScriptEnabled
+        onMessage={onMessage}
         startInLoadingState={true}
       />
     </SafeAreaView>

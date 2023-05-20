@@ -24,6 +24,7 @@ export default {
   interchange: 'InterChange',
   firstLastMetroDisclamer:
     'Use this search to find the First and Last Train from any source station to any destination station.',
+  loadingContent: 'Please wait while for loading the page',
   advanceFilter: 'Advance Filters',
 };
 export const cities = {
@@ -34,3 +35,5 @@ export const cities = {
   chennaiMetro: 'Chennai Metro',
   lucknowMetro: 'Lucknow Metro',
 };
+
+

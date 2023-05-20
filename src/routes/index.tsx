@@ -74,7 +74,6 @@ const HomeScreenStack = () => {
           name="NearestMetro"
           component={NearestMetro}
           options={{
-            // headerShown: false,
             headerTitle: 'Nearest Metro',
           }}
         />
@@ -82,7 +81,6 @@ const HomeScreenStack = () => {
           name="GeneralInfo"
           component={GeneralInfo}
           options={{
-            // headerShown: false,
             headerTitle: 'General Information',
           }}
         />
@@ -90,7 +88,6 @@ const HomeScreenStack = () => {
           name="OnlineRecharge"
           component={OnlineRecharge}
           options={{
-            // headerShown: false,
             headerTitle: 'Online Recharge',
           }}
         />
@@ -98,7 +95,6 @@ const HomeScreenStack = () => {
           name="FirstLastMetro"
           component={FirstLastMetro}
           options={{
-            // headerShown: false,
             headerTitle: 'First & Last Metro',
           }}
         />
@@ -106,7 +102,6 @@ const HomeScreenStack = () => {
           name="FareAndRoute"
           component={FareAndRoute}
           options={{
-            // headerShown: false,
             headerTitle: 'First & Last Metro',
           }}
         />

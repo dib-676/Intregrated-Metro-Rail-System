@@ -27,14 +27,15 @@ const PathIcon = (props: PathIcon) => {
       ))}
       {props.state &&
         data.map(() => (
-          <>
+          <View>
             <View style={{...style.dotIcon, ...props?.style?.dotLine}} />
             <View style={{...style.dotIcon, ...props?.style?.dotLine}}>
               <View style={{...style.flatDotIcon}} />
             </View>
             <View style={{...style.dotIcon, ...props?.style?.dotLine}} />
-          </>
+          </View>
         ))}
+
       <View style={{...style.dotIcon, ...props?.style?.dotLine}} />
       <View style={{...style.dotIcon, ...props?.style?.dotLine}} />
       <View style={{...style.closeCircle, ...props?.style?.closeCircle}} />
