@@ -14,7 +14,7 @@ const style = StyleSheet.create({
   card: {
     width: vw(110),
     height: vh(70),
-    // borderWidth: 2,
+    borderWidth: 2,
     justifyContent: 'space-between',
     alignItems: 'center',
     borderRadius: vw(8),

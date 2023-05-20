@@ -1,5 +1,4 @@
 import {
-  Animated,
   FlatList,
   LayoutAnimation,
   Text,
@@ -33,7 +32,7 @@ const RouteMap = (props: RouteMap) => {
   const time = props.data.path_time.split(':');
 
   return (
-    <Animated.View style={style.routeCard}>
+    <View style={style.routeCard}>
       <PathIcon
         style={{
           openCircle: {backgroundColor: fareRouteLineColor[props.data.line]},
@@ -70,13 +69,14 @@ const RouteMap = (props: RouteMap) => {
           state={state}
           data={props.data.path.slice(1, props.data.path.length - 1)}
         />
+
         <View>
           <Text style={style.lastStation}>
             {props.data.path[props.data.path.length - 1].name}
           </Text>
         </View>
       </View>
-    </Animated.View>
+    </View>
   );
 };
 
