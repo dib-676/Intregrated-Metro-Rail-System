@@ -11,6 +11,7 @@ import {useState} from 'react';
 import {vw} from '../../../../utils/dimensions';
 import StationList from '../StationList';
 import {fareRouteLineColor} from '../../../../constants';
+import {colors, fonts, strings} from '../../../../utils';
 
 interface RouteMap {
   data: {
@@ -30,7 +31,7 @@ interface RouteMap {
 const RouteMap = (props: RouteMap) => {
   const [state, setState] = useState(props.state);
   const time = props.data.path_time.split(':');
-
+  console.log('toward', props.data.towards_station);
   return (
     <View style={style.routeCard}>
       <PathIcon
@@ -43,28 +44,76 @@ const RouteMap = (props: RouteMap) => {
         state={state}
       />
       <View style={style.stationView}>
-        <View>
-          <Text style={style.firstStation}>{props.data.path[0].name}</Text>
-        </View>
-        {props.data.path.length - 2 > 0 && (
-          <TouchableOpacity
-            style={{marginTop: vw(10)}}
-            onPress={() => {
-              setState(!state);
-              LayoutAnimation.configureNext(
-                LayoutAnimation.Presets.easeInEaseOut,
-              );
+        <View style={{flexDirection: 'row'}}>
+          <View style={{flexDirection: 'row'}}>
+            <Text style={style.firstStation}>{props.data.path[0].name}</Text>
+            <View
+              style={{
+                marginStart: 10,
+                backgroundColor: fareRouteLineColor[props.data.line],
+                width: 68,
+                height: 25,
+                justifyContent: 'center',
+                alignItems: 'center',
+                borderRadius: 5,
+              }}>
+              <Text style={{color: colors.white, fontSize: 11}}>
+                {props.data.line}
+              </Text>
+            </View>
+          </View>
+          <View
+            style={{
+              justifyContent: 'flex-end',
+              padding: 5,
+              marginStart: 30,
             }}>
+            <Text
+              // numberOfLines={1}
+              style={{
+                color: colors.black60,
+                fontSize: 10,
+                fontFamily: fonts.IBM_Medium,
+                textAlign: 'right',
+              }}>
+              {strings.towards}
+            </Text>
+            <Text
+              numberOfLines={1}
+              style={{
+                color: colors.black60,
+                fontSize: 10,
+                fontFamily: fonts.IBM_Medium,
+                width: 100,
+                textAlign: 'right',
+              }}>
+              {props.data.towards_station}
+            </Text>
+          </View>
+        </View>
+
+        <TouchableOpacity
+          style={{marginTop: vw(10)}}
+          activeOpacity={0.9}
+          onPress={() => {
+            setState(!state);
+            LayoutAnimation.configureNext(
+              LayoutAnimation.Presets.easeInEaseOut,
+            );
+          }}>
+          {props.data.path.length - 2 > 0 && (
             <Text style={style.showBtn}>
               {state
                 ? `Show Less`
                 : `Show all ${props.data.path.length - 2} stations`}
             </Text>
-          </TouchableOpacity>
-        )}
-        <Text style={style.stationsTT}>{`${
+          )}
+        </TouchableOpacity>
+
+        <Text style={{...style.stationsTT}}>{`${
           parseInt(time[0]) * 60 + parseInt(time[1])
         } min(s)`}</Text>
+
         <StationList
           state={state}
           data={props.data.path.slice(1, props.data.path.length - 1)}

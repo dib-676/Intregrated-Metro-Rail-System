@@ -42,7 +42,7 @@ export default {
   black80: 'rgba(0,0,0,0.8)',
   black90: 'rgba(0,0,0,0.9)',
 
-  lightYellow: 'rgba(255,255,80,1)',
+  lightYellow: '#f6d71a',
   lightBlue: 'rgba(173,200,255,1)',
   lightOrange: 'rgba(265,190,0,1)',
   lightPink: 'rgba(255,180,255,1)',

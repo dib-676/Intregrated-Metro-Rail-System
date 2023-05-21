@@ -11,9 +11,11 @@ import {
   setStationName,
   setFLMSource,
   setFLMDestination,
+  setStationDetail,
 } from '../../redux-toolkit/reducers/metroSlice';
 import Toast from 'react-native-simple-toast';
 import {isSubstring} from '../../utils/commonFunction';
+import {fetchStationDetail} from '../../redux-toolkit/api/axiosConfig';
 
 const stationItem = ({
   item,
@@ -24,7 +26,6 @@ const stationItem = ({
   destination,
   callback,
 }: any) => {
-
   return (
     <TouchableOpacity
       activeOpacity={0.7}
@@ -57,7 +58,12 @@ const stationItem = ({
             }
           }
         } else if (searchType == 'Search Station') {
-          dispatch(setStationName(item.station_name));
+          dispatch(
+            setStationName({
+              station_name: item.station_name,
+              station_code: item.station_code,
+            }),
+          );
           navigation.navigate('StationDashboard');
         } else if (searchType == 'Depart From') {
           if (destination != item.station_name) {

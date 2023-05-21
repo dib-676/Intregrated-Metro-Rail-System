@@ -90,7 +90,7 @@ const HomeScreen = ({navigation}) => {
   };
   const handleAction = () => {
     console.log('1');
-    navigation.navigate('MetroMapView');
+    navigation.navigate('MetroMapView', {city: city});
   };
   console.log(`day === ${day}`);
   console.log(`Advance Filters === ${value}`);
@@ -154,7 +154,6 @@ const HomeScreen = ({navigation}) => {
             nearestStation={dist}
           />
           <MetroMap
-            city={city}
             style={style.metroMap}
             icon={{icon: images.metroMapImg, style: style.metroMapImg}}
             handleAction={handleAction}

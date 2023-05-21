@@ -24,5 +24,9 @@ export default {
   fareImg: require('../assets/images/fare.png'),
   metroMapImg: require('../assets/images/metroMapLogo.png'),
   walkThroughImg: require('../assets/images/WalkThroughBGImg.jpeg'),
-  metroGMapImg: require('../assets/images/metroMap.jpeg'),
+  delhiMetroMapImg: require('../assets/images/metroMap.png'),
+  kolkataMetroMapImg: require('../assets/images/kolkataMetroMap.png'),
+  noidaMetroMapImg: require('../assets/images/noidaMetroMap.png'),
+  stationImg: require('../assets/images/stationsIcon.png'),
+  interchangeImg: require('../assets/images/interchange.png'),
 };

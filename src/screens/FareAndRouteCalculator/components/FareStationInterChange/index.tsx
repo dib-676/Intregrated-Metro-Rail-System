@@ -11,7 +11,12 @@ const FareStationInterChange = (props: FareModule) => {
   return (
     <View style={style.mainFrame}>
       <View style={style.card}>
-        <Image source={images.fareImg} style={style.fareImg} />
+        <View style={style.circleImg}>
+          <Image
+            source={images.fareImg}
+            style={{...style.fareImg, transform: [{rotate: '150deg'}]}}
+          />
+        </View>
         <View>
           <Text style={style.headerCard}>{strings.fare}</Text>
           <Text style={style.headerCardTxt}>
@@ -21,7 +26,9 @@ const FareStationInterChange = (props: FareModule) => {
         </View>
       </View>
       <View style={style.card}>
-        <View></View>
+        <View style={style.circleImg}>
+          <Image source={images.stationImg} style={style.fareImg} />
+        </View>
         <View>
           <Text style={style.headerCard}>{strings.station}</Text>
           <Text style={style.headerCardTxt}>{props.station}</Text>
@@ -29,7 +36,9 @@ const FareStationInterChange = (props: FareModule) => {
       </View>
       {props.interchange !== 0 && (
         <View style={style.card}>
-          <View></View>
+          <View style={style.circleImg}>
+            <Image source={images.interchangeImg} style={style.fareImg} />
+          </View>
           <View>
             <Text style={style.headerCard}>{strings.interchange}</Text>
             <Text style={style.headerCardTxt}>{props.interchange}</Text>

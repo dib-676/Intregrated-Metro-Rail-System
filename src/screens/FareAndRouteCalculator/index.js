@@ -12,8 +12,10 @@ const FareAndRoute = props => {
   const {city, source_stCode, destination_stCode} = useSelector(
     state => state.metroReducer,
   );
-  const {day,value} = props.route.params;
-  const [chipState, setChipState] = useState(value==='least-distance'?0:1);
+  const {day, value} = props.route.params;
+  const [chipState, setChipState] = useState(
+    value === 'least-distance' ? 0 : 1,
+  );
   const [fare, setFare] = useState({});
   const [time, setTime] = useState('');
   const [station, setStation] = useState('');
@@ -23,7 +25,7 @@ const FareAndRoute = props => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-//     calculateFare('least-distance');
+    //     calculateFare('least-distance');
     calculateFare(value);
   }, []);
 
@@ -45,6 +47,7 @@ const FareAndRoute = props => {
   console.log('station', station);
   console.log('interchange', interchange);
   console.log('day', day);
+  console.log('route', route);
 
   return (
     <SafeAreaView style={{flex: 1}}>

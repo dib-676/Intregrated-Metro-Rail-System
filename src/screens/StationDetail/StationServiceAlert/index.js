@@ -1,7 +1,7 @@
 import {FlatList, View} from 'react-native';
 import style from './style';
 import {colors, dimensions} from '../../../utils';
-import {lineColors} from '../../../constants';
+import {fareRouteLineColor, lineColors} from '../../../constants';
 const {vw, vh} = dimensions;
 const StationServiceAlert = (props: any) => {
   const lineIcon = (color: string) => (
@@ -21,12 +21,12 @@ const StationServiceAlert = (props: any) => {
           style={{
             ...style.serviceLineView,
             borderColor: item.color,
-            backgroundColor: lineColors[item.color],
+            backgroundColor: fareRouteLineColor[item.line_color],
           }}></View>
       </View>
     );
   };
-  console.log(props.data.length);
+  console.log(props.data);
   return (
     <View style={{height: vh(70 * props.data.length)}}>
       <FlatList

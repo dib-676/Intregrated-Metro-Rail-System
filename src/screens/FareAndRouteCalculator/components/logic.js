@@ -29,7 +29,7 @@ export const delhiMetroFareCalculator = ({
         setTime((hour + min).toString());
         setStation(response.data.stations);
         setInterchange(response.data.route.length - 1);
-        console.log(response.data.route);
+        console.log(response.data);
         setRoute(response.data.route);
       })
       .catch(error => console.log(error));
@@ -72,7 +72,7 @@ export const calculateNoidaMetroFare = ({
       path_time: '0:' + time.toString() + ':0',
       start: 'NOIDA SEC-51',
       station_interchange_time: 0,
-      towards_station: 'Delport',
+      towards_station: x1 - x2 < 0 ? 'Delport' : 'NOIDA SEC-51',
     },
   ];
   console.log(route);

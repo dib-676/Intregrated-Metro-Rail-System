@@ -11,6 +11,7 @@ const initialState = {
   flm_source_stCode: '',
   flm_destination_stCode: '',
   stationName: '',
+  station_stCode: '',
   stationData: [],
   location: {},
 };
@@ -38,7 +39,8 @@ export const metroSlice = createSlice({
       state.flm_destination_stCode = actions.payload.station_code;
     },
     setStationName: (state, actions) => {
-      state.stationName = actions.payload;
+      state.stationName = actions.payload.station_name;
+      state.station_stCode = actions.payload.station_code;
     },
     setLocation: (state, actions) => {
       state.location = {...state.location, ...actions.payload};
@@ -50,6 +52,9 @@ export const metroSlice = createSlice({
       state.city = 'Delhi Metro';
       state.source = '';
       state.destination = '';
+    },
+    setStationDetail: (state, actions) => {
+      state.stationDetail = actions.payload;
     },
     setSwipeStation: (state, actions) => {
       if (actions.payload.type == 'firstLast') {
@@ -83,5 +88,6 @@ export const {
   setStationData,
   setReset,
   setSwipeStation,
+  setStationDetail,
 } = metroSlice.actions;
 export default metroSlice.reducer;

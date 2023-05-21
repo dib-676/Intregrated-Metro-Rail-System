@@ -23,11 +23,12 @@ const style = StyleSheet.create({
   },
   stationsTT: {
     marginTop: vh(10),
-    marginBottom: vh(37),
+    marginBottom: vh(13),
     color: colors.darkBlack,
   },
   showBtn: {
-    color: colors.darkBlack,
+    color: colors.blue,
+    fontFamily: fonts.IBM_Bold,
   },
 });
 export default style;

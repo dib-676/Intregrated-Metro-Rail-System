@@ -14,11 +14,28 @@ export const fetchBaseUrl = axios.create({
   timeout: 1000,
 });
 
-export const useFetchStationList = props => {
+export const useFetchStationList = (props: any) => {
   axios
     .get(`${API_BASE_URL}/station_list`)
     .then(response => {
       props.setData(response.data);
     })
     .catch(err => console.log(err));
+};
+
+export const fetchStationDetail = ({
+  city,
+  station_code,
+  setStationDetail,
+  setLoading,
+}: any) => {
+  if (city === 'Delhi Metro') {
+    axios
+      .get(`${API_BASE_URL}/station/${station_code}`)
+      .then(response => {
+        setLoading(false);
+        setStationDetail(response.data);
+      })
+      .catch(err => console.log(err));
+  }
 };
