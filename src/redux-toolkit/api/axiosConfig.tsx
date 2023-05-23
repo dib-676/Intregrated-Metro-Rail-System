@@ -1,4 +1,5 @@
 import axios from 'axios';
+import {noidaStations} from '../../constants';
 
 export const BASE_URL = 'https://backend.delhimetrorail.com';
 export const API_BASE_URL = `${BASE_URL}/api/v2/en`;
@@ -27,15 +28,27 @@ export const fetchStationDetail = ({
   city,
   station_code,
   setStationDetail,
-  setLoading,
-}: any) => {
+  dispatch,
+  navigation,
+}: // setLoading,
+any) => {
+  console.log('fetchStation', city);
   if (city === 'Delhi Metro') {
+    console.log('fetch station x');
     axios
       .get(`${API_BASE_URL}/station/${station_code}`)
       .then(response => {
-        setLoading(false);
-        setStationDetail(response.data);
+        // setLoading(false);
+        dispatch(setStationDetail(response.data));
+        navigation.navigate('StationDashboard');
       })
       .catch(err => console.log(err));
+  } else if (city === 'Noida Metro') {
+    console.log('fetch station x');
+    const stationDetail = noidaStations.filter(
+      val => val.station_code === station_code,
+    )[0];
+    dispatch(setStationDetail(stationDetail));
+    navigation.navigate('StationDashboard');
   }
 };

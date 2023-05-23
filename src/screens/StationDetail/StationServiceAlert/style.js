@@ -8,7 +8,7 @@ const style = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    paddingHorizontal: vw(10),
+    paddingHorizontal: vw(5),
   },
   dottedView: {
     width: vw(40),
@@ -30,6 +30,8 @@ const style = StyleSheet.create({
     borderWidth: 2,
     width: vw(300),
     height: vh(53),
+    flexDirection: 'row',
+    justifyContent: 'space-evenly',
   },
 });
 export default style;

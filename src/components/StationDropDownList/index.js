@@ -18,6 +18,7 @@ import {isSubstring} from '../../utils/commonFunction';
 import {fetchStationDetail} from '../../redux-toolkit/api/axiosConfig';
 
 const stationItem = ({
+  city,
   item,
   navigation,
   searchType,
@@ -26,6 +27,17 @@ const stationItem = ({
   destination,
   callback,
 }: any) => {
+  const stationDetailFetch = ({station_code}) => {
+    console.log('xxxx city ==== ', city);
+    fetchStationDetail({
+      city: city,
+      station_code: station_code,
+      setStationDetail: setStationDetail,
+      dispatch: dispatch,
+      navigation: navigation,
+    });
+    // navigation.navigate('StationDashboard');
+  };
   return (
     <TouchableOpacity
       activeOpacity={0.7}
@@ -64,7 +76,7 @@ const stationItem = ({
               station_code: item.station_code,
             }),
           );
-          navigation.navigate('StationDashboard');
+          stationDetailFetch({station_code: item.station_code});
         } else if (searchType == 'Depart From') {
           if (destination != item.station_name) {
             dispatch(
@@ -143,6 +155,7 @@ const StationList = ({route, navigation}: any) => {
                   source,
                   destination,
                   callback,
+                  city,
                 })
               : null
             : stationItem({
@@ -153,6 +166,7 @@ const StationList = ({route, navigation}: any) => {
                 source,
                 destination,
                 callback,
+                city,
               })
         }
       />

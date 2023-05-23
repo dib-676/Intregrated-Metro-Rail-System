@@ -13,6 +13,7 @@ const initialState = {
   stationName: '',
   station_stCode: '',
   stationData: [],
+  stationDetail: {},
   location: {},
 };
 export const metroSlice = createSlice({

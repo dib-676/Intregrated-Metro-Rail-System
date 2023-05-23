@@ -123,6 +123,7 @@ const HomeScreen = ({navigation}) => {
           source={source}
           destination={destination}
           dispatch={dispatch}
+          city={city}
         />
         <View style={style.dateTimerView}>
           <CustomDateTimePicker

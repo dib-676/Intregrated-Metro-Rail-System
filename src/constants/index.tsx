@@ -441,7 +441,49 @@ const noidaStations = [
       'Toward DELPORT': '22:00:30',
       'Toward NOIDA NOIDA SECTOR 51': '-',
     },
-    details: {},
+    station_type: 'Elevated',
+    interchange: false,
+    latitude: '28.5623',
+    longitude: '77.3526',
+    x_coords: 3816.0,
+    y_coords: 3548.0,
+    mobile: '8800793140',
+    landline: '7290024757',
+    station_facility: [
+      {
+        name: 'Divyang Friendly Station',
+        class_name: 'flaticon-disabled',
+        image: {
+          title: 'disabled.png',
+          file: '/media/original_images/disabled_nq1qwhI.png',
+        },
+      },
+      {
+        name: 'Parking Available',
+        class_name: 'flaticon-parking-area',
+        image: {
+          title: '012-parking-area.png',
+          file: '/media/original_images/012-parking-area_1BNoFOj.png',
+        },
+      },
+      {
+        name: 'Lift/Escalator Available',
+        class_name: 'flaticon-elevator',
+        image: {
+          title: '007-elevator.png',
+          file: '/media/original_images/007-elevator_ew8UOTr.png',
+        },
+      },
+      {
+        name: 'Interchange Station',
+        class_name: 'flaticon-exchange',
+        image: {
+          title: '008-exchange.png',
+          file: '/media/original_images/008-exchange_q4UnGQr.png',
+        },
+      },
+    ],
+    
   },
   {
     serial: 1,
@@ -457,7 +499,48 @@ const noidaStations = [
       'Toward DELPORT': '22:02:30',
       'Toward NOIDA NOIDA SECTOR 51': '22:45:20',
     },
-    details: {},
+    station_type: 'Elevated',
+    interchange: false,
+    latitude: '28.5562',
+    longitude: '77.3637',
+    x_coords: 3816.0,
+    y_coords: 3548.0,
+    mobile: '8800793140',
+    landline: '7290024757',
+    station_facility: [
+      {
+        name: 'Divyang Friendly Station',
+        class_name: 'flaticon-disabled',
+        image: {
+          title: 'disabled.png',
+          file: '/media/original_images/disabled_nq1qwhI.png',
+        },
+      },
+      {
+        name: 'Parking Available',
+        class_name: 'flaticon-parking-area',
+        image: {
+          title: '012-parking-area.png',
+          file: '/media/original_images/012-parking-area_1BNoFOj.png',
+        },
+      },
+      {
+        name: 'Lift/Escalator Available',
+        class_name: 'flaticon-elevator',
+        image: {
+          title: '007-elevator.png',
+          file: '/media/original_images/007-elevator_ew8UOTr.png',
+        },
+      },
+      {
+        name: 'Interchange Station',
+        class_name: 'flaticon-exchange',
+        image: {
+          title: '008-exchange.png',
+          file: '/media/original_images/008-exchange_q4UnGQr.png',
+        },
+      },
+    ],
   },
   {
     serial: 2,
@@ -473,7 +556,48 @@ const noidaStations = [
       'Toward DELPORT': '22:03:26',
       'Toward NOIDA NOIDA SECTOR 51': '22:43:56',
     },
-    details: {},
+    station_type: 'Elevated',
+    interchange: false,
+    latitude: '28.5559',
+    longitude: '77.3737',
+    x_coords: 3816.0,
+    y_coords: 3548.0,
+    mobile: '8800793140',
+    landline: '7290024757',
+    station_facility: [
+      {
+        name: 'Divyang Friendly Station',
+        class_name: 'flaticon-disabled',
+        image: {
+          title: 'disabled.png',
+          file: '/media/original_images/disabled_nq1qwhI.png',
+        },
+      },
+      {
+        name: 'Parking Available',
+        class_name: 'flaticon-parking-area',
+        image: {
+          title: '012-parking-area.png',
+          file: '/media/original_images/012-parking-area_1BNoFOj.png',
+        },
+      },
+      {
+        name: 'Lift/Escalator Available',
+        class_name: 'flaticon-elevator',
+        image: {
+          title: '007-elevator.png',
+          file: '/media/original_images/007-elevator_ew8UOTr.png',
+        },
+      },
+      {
+        name: 'Interchange Station',
+        class_name: 'flaticon-exchange',
+        image: {
+          title: '008-exchange.png',
+          file: '/media/original_images/008-exchange_q4UnGQr.png',
+        },
+      },
+    ],
   },
   {
     serial: 3,
@@ -489,7 +613,48 @@ const noidaStations = [
       'Toward DELPORT': '22:05:12',
       'Toward NOIDA NOIDA SECTOR 51': '22:41:45',
     },
-    details: {},
+    station_type: 'Elevated',
+    interchange: false,
+    latitude: '28.5528',
+    longitude: '77.3856',
+    x_coords: 3816.0,
+    y_coords: 3548.0,
+    mobile: '8800793140',
+    landline: '7290024757',
+    station_facility: [
+      {
+        name: 'Divyang Friendly Station',
+        class_name: 'flaticon-disabled',
+        image: {
+          title: 'disabled.png',
+          file: '/media/original_images/disabled_nq1qwhI.png',
+        },
+      },
+      {
+        name: 'Parking Available',
+        class_name: 'flaticon-parking-area',
+        image: {
+          title: '012-parking-area.png',
+          file: '/media/original_images/012-parking-area_1BNoFOj.png',
+        },
+      },
+      {
+        name: 'Lift/Escalator Available',
+        class_name: 'flaticon-elevator',
+        image: {
+          title: '007-elevator.png',
+          file: '/media/original_images/007-elevator_ew8UOTr.png',
+        },
+      },
+      {
+        name: 'Interchange Station',
+        class_name: 'flaticon-exchange',
+        image: {
+          title: '008-exchange.png',
+          file: '/media/original_images/008-exchange_q4UnGQr.png',
+        },
+      },
+    ],
   },
   {
     serial: 4,
@@ -505,7 +670,48 @@ const noidaStations = [
       'Toward DELPORT': '22:07',
       'Toward NOIDA NOIDA SECTOR 51': '22:39',
     },
-    details: {},
+    station_type: 'Elevated',
+    interchange: false,
+    latitude: '28.5536',
+    longitude: '77.3969',
+    x_coords: 3816.0,
+    y_coords: 3548.0,
+    mobile: '8800793140',
+    landline: '7290024757',
+    station_facility: [
+      {
+        name: 'Divyang Friendly Station',
+        class_name: 'flaticon-disabled',
+        image: {
+          title: 'disabled.png',
+          file: '/media/original_images/disabled_nq1qwhI.png',
+        },
+      },
+      {
+        name: 'Parking Available',
+        class_name: 'flaticon-parking-area',
+        image: {
+          title: '012-parking-area.png',
+          file: '/media/original_images/012-parking-area_1BNoFOj.png',
+        },
+      },
+      {
+        name: 'Lift/Escalator Available',
+        class_name: 'flaticon-elevator',
+        image: {
+          title: '007-elevator.png',
+          file: '/media/original_images/007-elevator_ew8UOTr.png',
+        },
+      },
+      {
+        name: 'Interchange Station',
+        class_name: 'flaticon-exchange',
+        image: {
+          title: '008-exchange.png',
+          file: '/media/original_images/008-exchange_q4UnGQr.png',
+        },
+      },
+    ],
   },
   {
     serial: 5,
@@ -521,7 +727,48 @@ const noidaStations = [
       'Toward DELPORT': '22:09',
       'Toward NOIDA NOIDA SECTOR 51': '22:35',
     },
-    details: {},
+    station_type: 'Elevated',
+    interchange: false,
+    latitude: '28.5308',
+    longitude: '77.3405',
+    x_coords: 3816.0,
+    y_coords: 3548.0,
+    mobile: '8800793140',
+    landline: '7290024757',
+    station_facility: [
+      {
+        name: 'Divyang Friendly Station',
+        class_name: 'flaticon-disabled',
+        image: {
+          title: 'disabled.png',
+          file: '/media/original_images/disabled_nq1qwhI.png',
+        },
+      },
+      {
+        name: 'Parking Available',
+        class_name: 'flaticon-parking-area',
+        image: {
+          title: '012-parking-area.png',
+          file: '/media/original_images/012-parking-area_1BNoFOj.png',
+        },
+      },
+      {
+        name: 'Lift/Escalator Available',
+        class_name: 'flaticon-elevator',
+        image: {
+          title: '007-elevator.png',
+          file: '/media/original_images/007-elevator_ew8UOTr.png',
+        },
+      },
+      {
+        name: 'Interchange Station',
+        class_name: 'flaticon-exchange',
+        image: {
+          title: '008-exchange.png',
+          file: '/media/original_images/008-exchange_q4UnGQr.png',
+        },
+      },
+    ],
   },
   {
     serial: 6,
@@ -537,7 +784,48 @@ const noidaStations = [
       'Toward DELPORT': '22:12',
       'Toward NOIDA NOIDA SECTOR 51': '22:33',
     },
-    details: {},
+    station_type: 'Elevated',
+    interchange: false,
+    latitude: '28.5536',
+    longitude: '77.4105',
+    x_coords: 3816.0,
+    y_coords: 3548.0,
+    mobile: '8800793140',
+    landline: '7290024757',
+    station_facility: [
+      {
+        name: 'Divyang Friendly Station',
+        class_name: 'flaticon-disabled',
+        image: {
+          title: 'disabled.png',
+          file: '/media/original_images/disabled_nq1qwhI.png',
+        },
+      },
+      {
+        name: 'Parking Available',
+        class_name: 'flaticon-parking-area',
+        image: {
+          title: '012-parking-area.png',
+          file: '/media/original_images/012-parking-area_1BNoFOj.png',
+        },
+      },
+      {
+        name: 'Lift/Escalator Available',
+        class_name: 'flaticon-elevator',
+        image: {
+          title: '007-elevator.png',
+          file: '/media/original_images/007-elevator_ew8UOTr.png',
+        },
+      },
+      {
+        name: 'Interchange Station',
+        class_name: 'flaticon-exchange',
+        image: {
+          title: '008-exchange.png',
+          file: '/media/original_images/008-exchange_q4UnGQr.png',
+        },
+      },
+    ],
   },
   {
     serial: 7,
@@ -553,7 +841,48 @@ const noidaStations = [
       'Toward DELPORT': '22:14',
       'Toward NOIDA NOIDA SECTOR 51': '22:31',
     },
-    details: {},
+    station_type: 'Elevated',
+    interchange: false,
+    latitude: '28.5536',
+    longitude: '77.4250',
+    x_coords: 3816.0,
+    y_coords: 3548.0,
+    mobile: '8800793140',
+    landline: '7290024757',
+    station_facility: [
+      {
+        name: 'Divyang Friendly Station',
+        class_name: 'flaticon-disabled',
+        image: {
+          title: 'disabled.png',
+          file: '/media/original_images/disabled_nq1qwhI.png',
+        },
+      },
+      {
+        name: 'Parking Available',
+        class_name: 'flaticon-parking-area',
+        image: {
+          title: '012-parking-area.png',
+          file: '/media/original_images/012-parking-area_1BNoFOj.png',
+        },
+      },
+      {
+        name: 'Lift/Escalator Available',
+        class_name: 'flaticon-elevator',
+        image: {
+          title: '007-elevator.png',
+          file: '/media/original_images/007-elevator_ew8UOTr.png',
+        },
+      },
+      {
+        name: 'Interchange Station',
+        class_name: 'flaticon-exchange',
+        image: {
+          title: '008-exchange.png',
+          file: '/media/original_images/008-exchange_q4UnGQr.png',
+        },
+      },
+    ],
   },
   {
     serial: 8,
@@ -569,7 +898,48 @@ const noidaStations = [
       'Toward DELPORT': '22:17',
       'Toward NOIDA NOIDA SECTOR 51': '22:28',
     },
-    details: {},
+    station_type: 'Elevated',
+    interchange: false,
+    latitude: '28.5536',
+    longitude: '77.4361',
+    x_coords: 3816.0,
+    y_coords: 3548.0,
+    mobile: '8800793140',
+    landline: '7290024757',
+    station_facility: [
+      {
+        name: 'Divyang Friendly Station',
+        class_name: 'flaticon-disabled',
+        image: {
+          title: 'disabled.png',
+          file: '/media/original_images/disabled_nq1qwhI.png',
+        },
+      },
+      {
+        name: 'Parking Available',
+        class_name: 'flaticon-parking-area',
+        image: {
+          title: '012-parking-area.png',
+          file: '/media/original_images/012-parking-area_1BNoFOj.png',
+        },
+      },
+      {
+        name: 'Lift/Escalator Available',
+        class_name: 'flaticon-elevator',
+        image: {
+          title: '007-elevator.png',
+          file: '/media/original_images/007-elevator_ew8UOTr.png',
+        },
+      },
+      {
+        name: 'Interchange Station',
+        class_name: 'flaticon-exchange',
+        image: {
+          title: '008-exchange.png',
+          file: '/media/original_images/008-exchange_q4UnGQr.png',
+        },
+      },
+    ],
   },
   {
     serial: 9,
@@ -585,7 +955,48 @@ const noidaStations = [
       'Toward DELPORT': '22:19',
       'Toward NOIDA NOIDA SECTOR 51': '22:26',
     },
-    details: {},
+    station_type: 'Elevated',
+    interchange: false,
+    latitude: '28.5536',
+    longitude: '77.4452',
+    x_coords: 3816.0,
+    y_coords: 3548.0,
+    mobile: '8800793140',
+    landline: '7290024757',
+    station_facility: [
+      {
+        name: 'Divyang Friendly Station',
+        class_name: 'flaticon-disabled',
+        image: {
+          title: 'disabled.png',
+          file: '/media/original_images/disabled_nq1qwhI.png',
+        },
+      },
+      {
+        name: 'Parking Available',
+        class_name: 'flaticon-parking-area',
+        image: {
+          title: '012-parking-area.png',
+          file: '/media/original_images/012-parking-area_1BNoFOj.png',
+        },
+      },
+      {
+        name: 'Lift/Escalator Available',
+        class_name: 'flaticon-elevator',
+        image: {
+          title: '007-elevator.png',
+          file: '/media/original_images/007-elevator_ew8UOTr.png',
+        },
+      },
+      {
+        name: 'Interchange Station',
+        class_name: 'flaticon-exchange',
+        image: {
+          title: '008-exchange.png',
+          file: '/media/original_images/008-exchange_q4UnGQr.png',
+        },
+      },
+    ],
   },
   {
     serial: 10,
@@ -601,7 +1012,48 @@ const noidaStations = [
       'Toward DELPORT': '22:22',
       'Toward NOIDA NOIDA SECTOR 51': '22:24',
     },
-    details: {},
+    station_type: 'Elevated',
+    interchange: false,
+    latitude: '28.5536',
+    longitude: '77.4553',
+    x_coords: 3816.0,
+    y_coords: 3548.0,
+    mobile: '8800793140',
+    landline: '7290024757',
+    station_facility: [
+      {
+        name: 'Divyang Friendly Station',
+        class_name: 'flaticon-disabled',
+        image: {
+          title: 'disabled.png',
+          file: '/media/original_images/disabled_nq1qwhI.png',
+        },
+      },
+      {
+        name: 'Parking Available',
+        class_name: 'flaticon-parking-area',
+        image: {
+          title: '012-parking-area.png',
+          file: '/media/original_images/012-parking-area_1BNoFOj.png',
+        },
+      },
+      {
+        name: 'Lift/Escalator Available',
+        class_name: 'flaticon-elevator',
+        image: {
+          title: '007-elevator.png',
+          file: '/media/original_images/007-elevator_ew8UOTr.png',
+        },
+      },
+      {
+        name: 'Interchange Station',
+        class_name: 'flaticon-exchange',
+        image: {
+          title: '008-exchange.png',
+          file: '/media/original_images/008-exchange_q4UnGQr.png',
+        },
+      },
+    ],
   },
   {
     serial: 11,
@@ -617,7 +1069,48 @@ const noidaStations = [
       'Toward DELPORT': '22:24',
       'Toward NOIDA NOIDA SECTOR 51': '22:21',
     },
-    details: {},
+    station_type: 'Elevated',
+    interchange: false,
+    latitude: '28.5536',
+    longitude: '77.4655',
+    x_coords: 3816.0,
+    y_coords: 3548.0,
+    mobile: '8800793140',
+    landline: '7290024757',
+    station_facility: [
+      {
+        name: 'Divyang Friendly Station',
+        class_name: 'flaticon-disabled',
+        image: {
+          title: 'disabled.png',
+          file: '/media/original_images/disabled_nq1qwhI.png',
+        },
+      },
+      {
+        name: 'Parking Available',
+        class_name: 'flaticon-parking-area',
+        image: {
+          title: '012-parking-area.png',
+          file: '/media/original_images/012-parking-area_1BNoFOj.png',
+        },
+      },
+      {
+        name: 'Lift/Escalator Available',
+        class_name: 'flaticon-elevator',
+        image: {
+          title: '007-elevator.png',
+          file: '/media/original_images/007-elevator_ew8UOTr.png',
+        },
+      },
+      {
+        name: 'Interchange Station',
+        class_name: 'flaticon-exchange',
+        image: {
+          title: '008-exchange.png',
+          file: '/media/original_images/008-exchange_q4UnGQr.png',
+        },
+      },
+    ],
   },
   {
     serial: 12,
@@ -633,7 +1126,48 @@ const noidaStations = [
       'Toward DELPORT': '22:27',
       'Toward NOIDA NOIDA SECTOR 51': '22:19',
     },
-    details: {},
+    station_type: 'Elevated',
+    interchange: false,
+    latitude: '28.5536',
+    longitude: '77.4756',
+    x_coords: 3816.0,
+    y_coords: 3548.0,
+    mobile: '8800793140',
+    landline: '7290024757',
+    station_facility: [
+      {
+        name: 'Divyang Friendly Station',
+        class_name: 'flaticon-disabled',
+        image: {
+          title: 'disabled.png',
+          file: '/media/original_images/disabled_nq1qwhI.png',
+        },
+      },
+      {
+        name: 'Parking Available',
+        class_name: 'flaticon-parking-area',
+        image: {
+          title: '012-parking-area.png',
+          file: '/media/original_images/012-parking-area_1BNoFOj.png',
+        },
+      },
+      {
+        name: 'Lift/Escalator Available',
+        class_name: 'flaticon-elevator',
+        image: {
+          title: '007-elevator.png',
+          file: '/media/original_images/007-elevator_ew8UOTr.png',
+        },
+      },
+      {
+        name: 'Interchange Station',
+        class_name: 'flaticon-exchange',
+        image: {
+          title: '008-exchange.png',
+          file: '/media/original_images/008-exchange_q4UnGQr.png',
+        },
+      },
+    ],
   },
   {
     serial: 13,
@@ -649,7 +1183,48 @@ const noidaStations = [
       'Toward DELPORT': '22:29',
       'Toward NOIDA NOIDA SECTOR 51': '22:16',
     },
-    details: {},
+    station_type: 'Elevated',
+    interchange: false,
+    latitude: '28.5536',
+    longitude: '77.4858',
+    x_coords: 3816.0,
+    y_coords: 3548.0,
+    mobile: '8800793140',
+    landline: '7290024757',
+    station_facility: [
+      {
+        name: 'Divyang Friendly Station',
+        class_name: 'flaticon-disabled',
+        image: {
+          title: 'disabled.png',
+          file: '/media/original_images/disabled_nq1qwhI.png',
+        },
+      },
+      {
+        name: 'Parking Available',
+        class_name: 'flaticon-parking-area',
+        image: {
+          title: '012-parking-area.png',
+          file: '/media/original_images/012-parking-area_1BNoFOj.png',
+        },
+      },
+      {
+        name: 'Lift/Escalator Available',
+        class_name: 'flaticon-elevator',
+        image: {
+          title: '007-elevator.png',
+          file: '/media/original_images/007-elevator_ew8UOTr.png',
+        },
+      },
+      {
+        name: 'Interchange Station',
+        class_name: 'flaticon-exchange',
+        image: {
+          title: '008-exchange.png',
+          file: '/media/original_images/008-exchange_q4UnGQr.png',
+        },
+      },
+    ],
   },
   {
     serial: 14,
@@ -665,7 +1240,48 @@ const noidaStations = [
       'Toward DELPORT': '22:31',
       'Toward NOIDA NOIDA SECTOR 51': '22:14',
     },
-    details: {},
+    station_type: 'Elevated',
+    interchange: false,
+    latitude: '28.5536',
+    longitude: '77.4959',
+    x_coords: 3816.0,
+    y_coords: 3548.0,
+    mobile: '8800793140',
+    landline: '7290024757',
+    station_facility: [
+      {
+        name: 'Divyang Friendly Station',
+        class_name: 'flaticon-disabled',
+        image: {
+          title: 'disabled.png',
+          file: '/media/original_images/disabled_nq1qwhI.png',
+        },
+      },
+      {
+        name: 'Parking Available',
+        class_name: 'flaticon-parking-area',
+        image: {
+          title: '012-parking-area.png',
+          file: '/media/original_images/012-parking-area_1BNoFOj.png',
+        },
+      },
+      {
+        name: 'Lift/Escalator Available',
+        class_name: 'flaticon-elevator',
+        image: {
+          title: '007-elevator.png',
+          file: '/media/original_images/007-elevator_ew8UOTr.png',
+        },
+      },
+      {
+        name: 'Interchange Station',
+        class_name: 'flaticon-exchange',
+        image: {
+          title: '008-exchange.png',
+          file: '/media/original_images/008-exchange_q4UnGQr.png',
+        },
+      },
+    ],
   },
   {
     serial: 15,
@@ -681,7 +1297,48 @@ const noidaStations = [
       'Toward DELPORT': '22:35',
       'Toward NOIDA NOIDA SECTOR 51': '22:10',
     },
-    details: {},
+    station_type: 'Elevated',
+    interchange: false,
+    latitude: '28.4795',
+    longitude: '77.5346',
+    x_coords: 3816.0,
+    y_coords: 3548.0,
+    mobile: '8800793140',
+    landline: '7290024757',
+    station_facility: [
+      {
+        name: 'Divyang Friendly Station',
+        class_name: 'flaticon-disabled',
+        image: {
+          title: 'disabled.png',
+          file: '/media/original_images/disabled_nq1qwhI.png',
+        },
+      },
+      {
+        name: 'Parking Available',
+        class_name: 'flaticon-parking-area',
+        image: {
+          title: '012-parking-area.png',
+          file: '/media/original_images/012-parking-area_1BNoFOj.png',
+        },
+      },
+      {
+        name: 'Lift/Escalator Available',
+        class_name: 'flaticon-elevator',
+        image: {
+          title: '007-elevator.png',
+          file: '/media/original_images/007-elevator_ew8UOTr.png',
+        },
+      },
+      {
+        name: 'Interchange Station',
+        class_name: 'flaticon-exchange',
+        image: {
+          title: '008-exchange.png',
+          file: '/media/original_images/008-exchange_q4UnGQr.png',
+        },
+      },
+    ],
   },
   {
     serial: 16,
@@ -697,7 +1354,48 @@ const noidaStations = [
       'Toward DELPORT': '22:37',
       'Toward NOIDA NOIDA SECTOR 51': '22:08',
     },
-    details: {},
+    station_type: 'Elevated',
+    interchange: false,
+    latitude: '28.5536',
+    longitude: '77.5264',
+    x_coords: 3816.0,
+    y_coords: 3548.0,
+    mobile: '8800793140',
+    landline: '7290024757',
+    station_facility: [
+      {
+        name: 'Divyang Friendly Station',
+        class_name: 'flaticon-disabled',
+        image: {
+          title: 'disabled.png',
+          file: '/media/original_images/disabled_nq1qwhI.png',
+        },
+      },
+      {
+        name: 'Parking Available',
+        class_name: 'flaticon-parking-area',
+        image: {
+          title: '012-parking-area.png',
+          file: '/media/original_images/012-parking-area_1BNoFOj.png',
+        },
+      },
+      {
+        name: 'Lift/Escalator Available',
+        class_name: 'flaticon-elevator',
+        image: {
+          title: '007-elevator.png',
+          file: '/media/original_images/007-elevator_ew8UOTr.png',
+        },
+      },
+      {
+        name: 'Interchange Station',
+        class_name: 'flaticon-exchange',
+        image: {
+          title: '008-exchange.png',
+          file: '/media/original_images/008-exchange_q4UnGQr.png',
+        },
+      },
+    ],
   },
   {
     serial: 17,
@@ -713,7 +1411,48 @@ const noidaStations = [
       'Toward DELPORT': '22:39',
       'Toward NOIDA NOIDA SECTOR 51': '22:06',
     },
-    details: {},
+    station_type: 'Elevated',
+    interchange: false,
+    latitude: '28.5536',
+    longitude: '77.5061',
+    x_coords: 3816.0,
+    y_coords: 3548.0,
+    mobile: '8800793140',
+    landline: '7290024757',
+    station_facility: [
+      {
+        name: 'Divyang Friendly Station',
+        class_name: 'flaticon-disabled',
+        image: {
+          title: 'disabled.png',
+          file: '/media/original_images/disabled_nq1qwhI.png',
+        },
+      },
+      {
+        name: 'Parking Available',
+        class_name: 'flaticon-parking-area',
+        image: {
+          title: '012-parking-area.png',
+          file: '/media/original_images/012-parking-area_1BNoFOj.png',
+        },
+      },
+      {
+        name: 'Lift/Escalator Available',
+        class_name: 'flaticon-elevator',
+        image: {
+          title: '007-elevator.png',
+          file: '/media/original_images/007-elevator_ew8UOTr.png',
+        },
+      },
+      {
+        name: 'Interchange Station',
+        class_name: 'flaticon-exchange',
+        image: {
+          title: '008-exchange.png',
+          file: '/media/original_images/008-exchange_q4UnGQr.png',
+        },
+      },
+    ],
   },
   {
     serial: 18,
@@ -729,7 +1468,48 @@ const noidaStations = [
       'Toward DELPORT': '22:42',
       'Toward NOIDA NOIDA SECTOR 51': '22:03',
     },
-    details: {},
+    station_type: 'Elevated',
+    interchange: false,
+    latitude: '28.5536',
+    longitude: '77.5162',
+    x_coords: 3816.0,
+    y_coords: 3548.0,
+    mobile: '8800793140',
+    landline: '7290024757',
+    station_facility: [
+      {
+        name: 'Divyang Friendly Station',
+        class_name: 'flaticon-disabled',
+        image: {
+          title: 'disabled.png',
+          file: '/media/original_images/disabled_nq1qwhI.png',
+        },
+      },
+      {
+        name: 'Parking Available',
+        class_name: 'flaticon-parking-area',
+        image: {
+          title: '012-parking-area.png',
+          file: '/media/original_images/012-parking-area_1BNoFOj.png',
+        },
+      },
+      {
+        name: 'Lift/Escalator Available',
+        class_name: 'flaticon-elevator',
+        image: {
+          title: '007-elevator.png',
+          file: '/media/original_images/007-elevator_ew8UOTr.png',
+        },
+      },
+      {
+        name: 'Interchange Station',
+        class_name: 'flaticon-exchange',
+        image: {
+          title: '008-exchange.png',
+          file: '/media/original_images/008-exchange_q4UnGQr.png',
+        },
+      },
+    ],
   },
   {
     serial: 19,
@@ -745,7 +1525,48 @@ const noidaStations = [
       'Toward DELPORT': '22:44',
       'Toward NOIDA NOIDA SECTOR 51': '22:01',
     },
-    details: {},
+    station_type: 'Elevated',
+    interchange: false,
+    latitude: '28.4846',
+    longitude: '77.5365',
+    x_coords: 3816.0,
+    y_coords: 3548.0,
+    mobile: '8800793140',
+    landline: '7290024757',
+    station_facility: [
+      {
+        name: 'Divyang Friendly Station',
+        class_name: 'flaticon-disabled',
+        image: {
+          title: 'disabled.png',
+          file: '/media/original_images/disabled_nq1qwhI.png',
+        },
+      },
+      {
+        name: 'Parking Available',
+        class_name: 'flaticon-parking-area',
+        image: {
+          title: '012-parking-area.png',
+          file: '/media/original_images/012-parking-area_1BNoFOj.png',
+        },
+      },
+      {
+        name: 'Lift/Escalator Available',
+        class_name: 'flaticon-elevator',
+        image: {
+          title: '007-elevator.png',
+          file: '/media/original_images/007-elevator_ew8UOTr.png',
+        },
+      },
+      {
+        name: 'Interchange Station',
+        class_name: 'flaticon-exchange',
+        image: {
+          title: '008-exchange.png',
+          file: '/media/original_images/008-exchange_q4UnGQr.png',
+        },
+      },
+    ],
   },
   {
     serial: 20,
@@ -761,7 +1582,48 @@ const noidaStations = [
       'Toward DELPORT': '-',
       'Toward NOIDA NOIDA SECTOR 51': '22:00',
     },
-    details: {},
+    station_type: 'Elevated',
+    interchange: false,
+    latitude: '28.4889',
+    longitude: '77.5439',
+    x_coords: 3816.0,
+    y_coords: 3548.0,
+    mobile: '8800793140',
+    landline: '7290024757',
+    station_facility: [
+      {
+        name: 'Divyang Friendly Station',
+        class_name: 'flaticon-disabled',
+        image: {
+          title: 'disabled.png',
+          file: '/media/original_images/disabled_nq1qwhI.png',
+        },
+      },
+      {
+        name: 'Parking Available',
+        class_name: 'flaticon-parking-area',
+        image: {
+          title: '012-parking-area.png',
+          file: '/media/original_images/012-parking-area_1BNoFOj.png',
+        },
+      },
+      {
+        name: 'Lift/Escalator Available',
+        class_name: 'flaticon-elevator',
+        image: {
+          title: '007-elevator.png',
+          file: '/media/original_images/007-elevator_ew8UOTr.png',
+        },
+      },
+      {
+        name: 'Interchange Station',
+        class_name: 'flaticon-exchange',
+        image: {
+          title: '008-exchange.png',
+          file: '/media/original_images/008-exchange_q4UnGQr.png',
+        },
+      },
+    ],
   },
 ];
 const kolkataStations = [

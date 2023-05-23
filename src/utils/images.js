@@ -29,4 +29,7 @@ export default {
   noidaMetroMapImg: require('../assets/images/noidaMetroMap.png'),
   stationImg: require('../assets/images/stationsIcon.png'),
   interchangeImg: require('../assets/images/interchange.png'),
+  station_mobileImg: require('../assets/images/station_mobile.png'),
+  station_phoneImg: require('../assets/images/station_phone.png'),
+  trainImg: require('../assets/images/train.png'),
 };

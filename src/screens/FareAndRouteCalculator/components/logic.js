@@ -63,12 +63,13 @@ export const calculateNoidaMetroFare = ({
   const start = x1 - x2 > 0 ? x2 : x1;
   const end = x1 - x2 > 0 ? x1 : x2;
   console.log(x1, x2, start, end);
+  const path = noidaStations
+    .slice(start, end + 1)
+    .map(val => ({name: val.station_name, status: ''}));
   const route = [
     {
       line: 'Aqua Line',
-      path: noidaStations
-        .slice(start, end + 1)
-        .map(val => ({name: val.station_name, status: ''})),
+      path: x1 - x2 < 0 ? path : path.reverse(),
       path_time: '0:' + time.toString() + ':0',
       start: 'NOIDA SEC-51',
       station_interchange_time: 0,
@@ -103,7 +104,7 @@ export const calculateKolkataMetroFare = ({
   setInterchange,
   setTime,
   setRoute,
-}) => {
+}: any) => {
   let x1 = kolkataStations.filter((val: any) => {
     return val.station_code == source;
   })[0].serial;
@@ -117,12 +118,15 @@ export const calculateKolkataMetroFare = ({
   const line = Math.abs(x1 - x2);
   const time = parseInt(line * 1.7685 + line / 2);
   setTime(time);
+  const start = x1 - x2 > 0 ? x2 : x1;
+  const end = x1 - x2 > 0 ? x1 : x2;
+  const path = kolkataStations
+    .slice(start, end + 1)
+    .map(val => ({name: val.station_name, status: ''}));
   const route = [
     {
       line: 'Blue Line',
-      path: kolkataStations
-        .slice(x1, x2 + 1)
-        .map(val => ({name: val.station_name, status: ''})),
+      path: x1 - x2 < 0 ? path : path.reverse(),
       path_time: '0:' + time.toString() + ':0',
       start: 'KAVI SUBHASH',
       station_interchange_time: 0,

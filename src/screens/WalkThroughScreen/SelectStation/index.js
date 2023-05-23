@@ -18,6 +18,7 @@ const SelectStation = (props: any) => {
           props.navigation.navigate('StationList', {
             callback: props.type,
             searchType: 'Depart From',
+            city: props.city,
           })
         }
       />
@@ -41,6 +42,7 @@ const SelectStation = (props: any) => {
           props.navigation.navigate('StationList', {
             callback: props.type,
             searchType: 'Destination',
+            city: props.city,
           })
         }
       />

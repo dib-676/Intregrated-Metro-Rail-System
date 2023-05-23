@@ -14,9 +14,9 @@ const SplashScreen = ({navigation}: any) => {
   getNearestStations();
   useEffect(() => {
     const acc_interval = BackgroundTimer.setInterval(() => {
-      if (seconds < 8) {
+      if (seconds < 1) {
         setSeconds(seconds + 1);
-      } else if (seconds == 4) {
+      } else if (seconds == 1) {
         BackgroundTimer.clearInterval(acc_interval);
       }
     }, 1000);
@@ -26,7 +26,7 @@ const SplashScreen = ({navigation}: any) => {
   });
 
   useEffect(() => {
-    if (seconds == 4) {
+    if (seconds == 1) {
       navigation.replace('Home');
     }
   });

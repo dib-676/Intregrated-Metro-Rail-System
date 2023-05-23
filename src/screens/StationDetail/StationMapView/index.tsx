@@ -6,8 +6,8 @@ import {useState} from 'react';
 
 const StationMapView = (props: any) => {
   const [state, setState] = useState({
-    lat: 0.00922,
-    long: 0.00922,
+    lat: 0.000922,
+    long: 0.000922,
   });
   const onPressZoomIn = () => {
     state.lat > 0.00000922 &&
@@ -20,29 +20,35 @@ const StationMapView = (props: any) => {
       setState({...state, lat: state.lat * 10, long: state.long * 10});
   };
   console.log(state);
+  console.log(props);
   return (
     <View style={style.mapView}>
       <MapView
+        provider={'google'}
         style={style.map}
         initialRegion={{
-          latitude: props.lat,
-          longitude: props.long,
-          latitudeDelta: state.lat,
-          longitudeDelta: state.long,
+          latitude: parseInt(props?.lat),
+          longitude: parseInt(props?.long),
+          // latitude: 28.5034,
+          // longitude: 77.4803,
+          latitudeDelta: state?.lat,
+          longitudeDelta: state?.long,
         }}
         region={{
-          latitude: props.lat,
-          longitude: props.long,
-          latitudeDelta: state.lat,
-          longitudeDelta: state.long,
+          latitude: parseFloat(props?.lat),
+          longitude: parseFloat(props?.long),
+          // latitude: 28.5034,
+          // longitude: 77.4803,
+          latitudeDelta: state?.lat,
+          longitudeDelta: state?.long,
         }}
         zoomEnabled={true}>
         <Marker
           draggable
           tracksViewChanges={true}
           coordinate={{
-            latitude: props.lat,
-            longitude: props.long,
+            latitude: parseFloat(props.lat),
+            longitude: parseFloat(props.long),
           }}
           title={props.name + ' Metro Station'}
         />

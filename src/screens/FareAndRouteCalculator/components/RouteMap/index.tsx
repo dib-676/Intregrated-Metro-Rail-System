@@ -8,7 +8,7 @@ import {
 import PathIcon from '../../../../components/PathIcon';
 import style from './style';
 import {useState} from 'react';
-import {vw} from '../../../../utils/dimensions';
+import {vw, vh} from '../../../../utils/dimensions';
 import StationList from '../StationList';
 import {fareRouteLineColor} from '../../../../constants';
 import {colors, fonts, strings} from '../../../../utils';
@@ -44,7 +44,12 @@ const RouteMap = (props: RouteMap) => {
         state={state}
       />
       <View style={style.stationView}>
-        <View style={{flexDirection: 'row'}}>
+        <View
+          style={{
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            width: vw(320),
+          }}>
           <View style={{flexDirection: 'row'}}>
             <Text style={style.firstStation}>{props.data.path[0].name}</Text>
             <View
@@ -57,7 +62,7 @@ const RouteMap = (props: RouteMap) => {
                 alignItems: 'center',
                 borderRadius: 5,
               }}>
-              <Text style={{color: colors.white, fontSize: 11}}>
+              <Text style={{color: colors.white, fontSize: vw(11)}}>
                 {props.data.line}
               </Text>
             </View>
@@ -65,14 +70,12 @@ const RouteMap = (props: RouteMap) => {
           <View
             style={{
               justifyContent: 'flex-end',
-              padding: 5,
-              marginStart: 30,
+              padding: vw(5),
             }}>
             <Text
-              // numberOfLines={1}
               style={{
                 color: colors.black60,
-                fontSize: 10,
+                fontSize: vw(10),
                 fontFamily: fonts.IBM_Medium,
                 textAlign: 'right',
               }}>
@@ -82,9 +85,9 @@ const RouteMap = (props: RouteMap) => {
               numberOfLines={1}
               style={{
                 color: colors.black60,
-                fontSize: 10,
+                fontSize: vw(10),
                 fontFamily: fonts.IBM_Medium,
-                width: 100,
+                width: vw(100),
                 textAlign: 'right',
               }}>
               {props.data.towards_station}

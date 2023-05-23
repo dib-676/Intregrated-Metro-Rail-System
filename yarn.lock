@@ -6029,7 +6029,7 @@ react-native-gradle-plugin@^0.71.15:
 
 react-native-maps@^1.7.1:
   version "1.7.1"
-  resolved "https://registry.npmjs.org/react-native-maps/-/react-native-maps-1.7.1.tgz"
+  resolved "https://registry.yarnpkg.com/react-native-maps/-/react-native-maps-1.7.1.tgz#e0b9d68542b4b59b5ca3df375ada7c860fb41f2e"
   integrity sha512-CHVLzL+Q2jiUGgbt4/vosxVI1SukWyaLGjD62VLgR/wZpnH4Umi9ql1bmKDPWcfj2C1QZwMU0Yc7rXTbvZUIiw==
   dependencies:
     "@types/geojson" "^7946.0.10"

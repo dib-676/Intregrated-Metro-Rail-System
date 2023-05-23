@@ -10,20 +10,20 @@ import StationServiceAlert from '../StationServiceAlert';
 import StationMapView from '../StationMapView';
 import {fetchStationDetail} from '../../../redux-toolkit/api/axiosConfig';
 const StationDashboard = ({navigation}: any) => {
-  const [stationDetail, setStationDetail] = useState({});
-  const [loading, setLoading] = useState(true);
-  const {station_stCode, city} = useSelector(
+  // const [stationDetail, setStationDetail] = useState({});
+  const [loading, setLoading] = useState(false);
+  const {station_stCode, city, stationDetail} = useSelector(
     (state: any) => state.metroReducer,
   );
-  useEffect(() => {
-    setLoading(true);
-    fetchStationDetail({
-      city: city,
-      station_code: station_stCode,
-      setStationDetail: setStationDetail,
-      setLoading: setLoading,
-    });
-  }, []);
+  // useEffect(() => {
+  //   setLoading(true);
+  //   fetchStationDetail({
+  //     city: city,
+  //     station_code: station_stCode,
+  //     setStationDetail: setStationDetail,
+  //     setLoading: setLoading,
+  //   });
+  // }, []);
 
   console.log('stationDetail ==== >', stationDetail);
   console.log('loading ==== >', loading);
@@ -37,13 +37,13 @@ const StationDashboard = ({navigation}: any) => {
               onBackPress={() => navigation.goBack()}
               label={stationDetail?.station_name}
             />
-            <StationServiceAlert data={stationDetail?.metro_lines} />
-            {/* <StationMapView
-              lat={serviceLineData.details.lat}
-              long={serviceLineData.details.long}
-              name={serviceLineData.name}
+            {/* <StationServiceAlert data={stationDetail?.metro_lines} /> */}
+            <StationMapView
+              lat={stationDetail?.latitude}
+              long={stationDetail?.longitude}
+              name={stationDetail?.station_name}
             />
-            <StationAbtractDetail data={serviceLineData.details.otherDetails} /> */}
+            <StationAbtractDetail data={stationDetail} />
           </>
         )}
       </ScrollView>

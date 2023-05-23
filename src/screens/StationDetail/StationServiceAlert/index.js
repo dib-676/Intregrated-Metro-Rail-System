@@ -1,4 +1,4 @@
-import {FlatList, View} from 'react-native';
+import {FlatList, View, Text} from 'react-native';
 import style from './style';
 import {colors, dimensions} from '../../../utils';
 import {fareRouteLineColor, lineColors} from '../../../constants';
@@ -14,6 +14,7 @@ const StationServiceAlert = (props: any) => {
     </>
   );
   const renderItem = (item: any) => {
+    console.log('serviceAlertLine', item);
     return (
       <View style={{...style.serviceView}}>
         <View style={style.dottedView}>{lineIcon(colors.green)}</View>
@@ -22,7 +23,12 @@ const StationServiceAlert = (props: any) => {
             ...style.serviceLineView,
             borderColor: item.color,
             backgroundColor: fareRouteLineColor[item.line_color],
-          }}></View>
+          }}>
+          <View></View>
+          <View>
+            <Text>{item.status}</Text>
+          </View>
+        </View>
       </View>
     );
   };
