@@ -13,11 +13,12 @@ import style from './style';
 const {vw, vh} = dimensions;
 const HeaderScreen = (props: any) => {
   const {city} = useSelector((state: any) => state.metroReducer);
-  
+
   const headerStyle = {
     headerStyle: {
       height: props.type == 'None' ? vh(60) : vh(50),
-      backgroundColor: props.type == 'None' ? colors.blue : colors.borderColor,
+      backgroundColor:
+        props.type == 'None' ? colors.lightVoilet : colors.borderColor,
     },
   };
 

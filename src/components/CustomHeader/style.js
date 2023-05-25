@@ -68,6 +68,7 @@ const style = StyleSheet.create({
   searchBoxInp: {
     paddingStart: vw(10),
     width: vw(240),
+    color: colors.darkBlack,
     // borderWidth: 2,
   },
   clearBoxBtn: {

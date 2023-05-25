@@ -48,6 +48,7 @@ export default {
   lightPink: 'rgba(255,180,255,1)',
   lightMaganta: 'rgba(255,0,255,1)',
   lightVoilet: 'rgba(127,0,255,1)',
+  lightVoilet50: 'rgba(127,0,255,0.2)',
   lightRMGL: 'rgba(0,51,51,1)',
   lightPurple: 'rgba(160, 32, 240,1)',
   red: 'rgba(255,0,0,1)',

@@ -31,7 +31,9 @@ const style = StyleSheet.create({
     width: vw(300),
     height: vh(53),
     flexDirection: 'row',
-    justifyContent: 'space-evenly',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingHorizontal: vw(7),
   },
 });
 export default style;

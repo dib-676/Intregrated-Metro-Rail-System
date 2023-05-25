@@ -4,7 +4,7 @@ const {vw, vh} = dimensions;
 const style = StyleSheet.create({
   mainFrame: {
     flex: 1,
-    backgroundColor: colors.blue50,
+    backgroundColor: colors.lightVoilet50,
     alignItems: 'flex-end',
   },
   closeBtn: {

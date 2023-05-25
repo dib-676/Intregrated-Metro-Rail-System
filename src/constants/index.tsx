@@ -11,421 +11,6 @@ import {
   calculateFLMNoida,
 } from '../screens/FirstLastMetro/Logic';
 
-const delhiStations = [
-  {
-    name: 'ADARSH NAGAR',
-    lines: ['yellow'],
-    lineNumber: [{no: 2, color: 'yellow'}],
-    details: {
-      lat: 28.7165,
-      long: 77.17041,
-      otherDetails: [
-        {value: [{no: '72900052062', no: '8800793122'}], label: 'Contact'},
-        {
-          value: [
-            {type: 'Divyang Friendly Station'},
-            {type: 'Lift/Escalator Available'},
-          ],
-          label: 'Station',
-        },
-        {
-          label: 'Gates',
-          value: [
-            {
-              no: 'Gate No 4',
-              name: 'Sarai Pipal Thala',
-              willChair: 'Yes',
-            },
-            {
-              no: 'Gate No 3',
-              name: 'Bharola Village',
-              willChair: 'No',
-            },
-            {
-              no: 'Gate No 2',
-              name: 'Moolchand Colony',
-              willChair: 'Yes',
-            },
-            {
-              no: 'Gate No 1',
-              name: 'Rajan Babu Road, Adarsh Nagar',
-              willChair: 'No',
-            },
-          ],
-        },
-        {
-          label: 'Platforms',
-          value: [
-            {
-              no: 'Platform No. 2',
-              dir: 'SAMAYPUR BADLI',
-            },
-            {
-              no: 'Platform No. 1',
-              dir: 'HUDA CITY CENTRE',
-            },
-          ],
-        },
-      ],
-    },
-  },
-  {
-    name: 'AIIMS',
-    lines: ['yellow'],
-    lineNumber: [{no: 2, color: 'yellow'}],
-    details: {
-      lat: 28.5668602,
-      long: 77.2078058,
-      otherDetails: [
-        {contact: [{no: '7290024757', no: '8800793140'}]},
-        {
-          station: [
-            {type: 'Divyang Friendly Station'},
-            {type: 'Lift/Escalator Available'},
-          ],
-        },
-        {
-          gates: [
-            {
-              no: 'Gate No 4',
-              name: 'Ring Road, Vardhman Mahavir Medical College & Safdarjung Hospital',
-              willChair: 'No',
-            },
-            {
-              no: 'Gate No 3',
-              name: 'Ansari Nagar West, Post Office, Vardhman Mahavir Medical College & Safdarjung Hospital',
-              willChair: 'Yes',
-            },
-            {
-              no: 'Gate No 2',
-              name: 'AIIMS Hospital, Ansari Nagar East, Yusuf Sarai',
-              willChair: 'Yes',
-            },
-            {
-              no: 'Gate No 1',
-              name: 'AIIMS Hospital, Kidwai Nagar',
-              willChair: 'Yes',
-            },
-          ],
-        },
-        {
-          Platforms: [
-            {
-              no: 'Platform No. 2',
-              dir: 'SAMAYPUR BADLI',
-            },
-            {
-              no: 'Platform No. 1',
-              dir: 'HUDA CITY CENTRE',
-            },
-          ],
-        },
-      ],
-    },
-  },
-  {
-    name: 'AIRPORT (T-3)',
-    lines: ['orange'],
-    lineNumber: [{no: 10, color: 'orange'}],
-    details: {
-      lat: 28.5668602,
-      long: 77.2078058,
-      contact: [{no: '7290027380', no: '8527390345'}],
-      station: [
-        {type: 'Divyang Friendly Station'},
-        {type: 'Paid Porter/ Trolley Facility'},
-        {type: 'Lift/Escalator Available'},
-      ],
-      gates: [
-        {
-          no: 'Multiple Gates',
-          name: 'At Aiport there are multiple entries which connects Airport(T-3) to metro station',
-          willChair: 'Yes',
-        },
-      ],
-      Platforms: [
-        {
-          no: 'Platform No. 3',
-          dir: 'NEW DELHI (Yellow & Airport Line)',
-        },
-        {
-          no: 'Platform No. 2',
-          dir: 'DWARKA SECTOR - 21',
-        },
-      ],
-    },
-  },
-  {
-    name: 'AKSHARDHAM',
-    lines: ['blue'],
-    lineNumber: [{no: 3, color: 'blue'}],
-    details: {
-      lat: 28.61784195,
-      long: 77.27948814325397,
-      contact: [{no: '7290021209', no: '8800793164'}],
-      station: [
-        {type: 'Divyang Friendly Station'},
-        {type: 'Parking Available'},
-        {type: 'Lift/Escalator Available'},
-      ],
-      gates: [
-        {
-          no: 'Gate No 3',
-          name: 'Foot Over Bridge',
-          willChair: 'No',
-        },
-        {
-          no: 'Gate No 2',
-          name: 'Parking Side',
-          willChair: 'Yes',
-        },
-        {
-          no: 'Gate No 1',
-          name: 'Fast Aproach Road',
-          willChair: 'Yes',
-        },
-      ],
-      Platforms: [
-        {
-          no: 'Platform No. 2',
-          dir: 'DWARKA SECTOR-21',
-        },
-        {
-          no: 'Platform No. 1',
-          dir: 'NOIDA ELECTRONIC CITY',
-        },
-      ],
-    },
-  },
-  {
-    name: 'ANAND VIHAR ISBT',
-    lines: ['blue', 'pink'],
-    lineNumber: [
-      {no: 3, color: 'blue'},
-      {no: 7, color: 'pink'},
-    ],
-    details: {
-      lat: 28.6467533,
-      long: 77.3180037,
-      contact: [
-        {
-          no: '7290012939',
-          no: '7290051077',
-          no: '8800793198',
-          no: '8448282934',
-        },
-      ],
-      station: [
-        {type: 'Divyang Friendly Station'},
-        {type: 'Lift/Escalator Available'},
-        {type: 'InterChange Station'},
-      ],
-      gates: [
-        {
-          no: 'Gate No 4',
-          name: 'Between Aanand Vihar ISBT and Railway Station',
-          willChair: 'Yes',
-        },
-        {
-          no: 'Gate No 3',
-          name: 'Bharola Village',
-          willChair: 'No',
-        },
-        {
-          no: 'Gate No 2',
-          name: 'Moolchand Colony',
-          willChair: 'Yes',
-        },
-        {
-          no: 'Gate No 1',
-          name: 'Rajan Babu Road, Adarsh Nagar',
-          willChair: 'No',
-        },
-      ],
-      Platforms: [
-        {
-          no: 'Platform No. 2',
-          dir: 'SAMAYPUR BADLI',
-        },
-        {
-          no: 'Platform No. 1',
-          dir: 'HUDA CITY CENTRE',
-        },
-      ],
-    },
-  },
-  {
-    name: 'ARJAN GARH',
-    lines: ['yellow'],
-    lineNumber: [{no: 2, color: 'yellow'}],
-    details: {
-      lat: 28.4807352,
-      long: 77.1257622,
-    },
-  },
-  {
-    name: 'ARTHALA',
-    lines: ['red'],
-    lineNumber: [{no: 1, color: 'red'}],
-    details: {
-      lat: 28.676999,
-      long: 77.3918919,
-    },
-  },
-  {
-    name: 'ASHOK PARK MAIN',
-    lines: ['green'],
-    lineNumber: [{no: 2, color: 'green'}],
-    details: {
-      lat: 28.6716045,
-      long: 77.155291,
-    },
-  },
-  {
-    name: 'ASHRAM',
-    lines: ['yellow'],
-    lineNumber: [{no: 2, color: 'yellow'}],
-    details: {},
-  },
-  {
-    name: 'AZADPUR',
-    lines: ['yellow'],
-    lineNumber: [{no: 2, color: 'yellow'}],
-    details: {},
-  },
-  {
-    name: 'BADARPUR BORDER',
-    lines: ['yellow'],
-    lineNumber: [{no: 2, color: 'yellow'}],
-    details: {},
-  },
-  {
-    name: 'BADKAL MOR',
-    lines: ['yellow'],
-    lineNumber: [{no: 2, color: 'yellow'}],
-    details: {},
-  },
-  {
-    name: 'BAHADURGARH CITY',
-    lines: ['yellow'],
-    lineNumber: [{no: 2, color: 'yellow'}],
-    details: {},
-  },
-  {
-    name: 'BARAKHAMBA ROAD',
-    lines: ['yellow'],
-    lineNumber: [{no: 2, color: 'yellow'}],
-    details: {},
-  },
-  {
-    name: 'BATA CHOWK',
-    lines: ['yellow'],
-    lineNumber: [{no: 2, color: 'yellow'}],
-    details: {},
-  },
-  {
-    name: 'BELVEDERE TOWERS',
-    lines: ['yellow'],
-    lineNumber: [{no: 2, color: 'yellow'}],
-    details: {},
-  },
-  {
-    name: 'BHIKAJI CAMA PLACE',
-    lines: ['yellow'],
-    lineNumber: [{no: 2, color: 'yellow'}],
-    details: {},
-  },
-  {
-    name: 'BOTANICAL GARDEN',
-    lines: ['blue'],
-    lineNumber: [{no: 4, color: 'blue'}],
-    details: {},
-  },
-  {
-    name: 'BRIG. HOSHIAR SINGH',
-    lines: ['yellow'],
-    lineNumber: [{no: 2, color: 'yellow'}],
-    details: {},
-  },
-  {
-    name: 'CENTRAL SECRETARIAT',
-    lines: ['yellow'],
-    lineNumber: [{no: 2, color: 'yellow'}],
-    details: {},
-  },
-  {
-    name: 'CHANDNI CHOWK',
-    lines: ['yellow'],
-    lineNumber: [{no: 2, color: 'yellow'}],
-    details: {},
-  },
-  {
-    name: 'CHAWRI BAZZAR',
-    lines: ['yellow'],
-    lineNumber: [{no: 2, color: 'yellow'}],
-    details: {},
-  },
-  {
-    name: 'CHHATARPUR',
-    lines: ['yellow'],
-    lineNumber: [{no: 2, color: 'yellow'}],
-    details: {},
-  },
-  {
-    name: 'CHIRAG DELHI',
-    lines: ['yellow'],
-    lineNumber: [{no: 2, color: 'yellow'}],
-    details: {},
-  },
-  {
-    name: 'CIVIL LINES',
-    lines: ['yellow'],
-    lineNumber: [{no: 2, color: 'yellow'}],
-    details: {},
-  },
-  {
-    lines: ['yellow'],
-    name: 'CYBER CITY',
-    lineNumber: [{no: 2, color: 'yellow'}],
-    details: {},
-  },
-  {
-    name: 'DABRI MOR - JANAKPURI SOUTH',
-    lines: ['blue'],
-    lineNumber: [{no: 3, color: 'blue'}],
-    details: {},
-  },
-  {
-    name: 'DASHRATHPURI',
-    lines: ['yellow'],
-    lineNumber: [{no: 2, color: 'yellow'}],
-    details: {},
-  },
-  {
-    name: 'DELHI AEROCITY',
-    lines: ['yellow'],
-    lineNumber: [{no: 2, color: 'yellow'}],
-    details: {},
-  },
-  {
-    name: 'DELHI CANTT',
-    lines: ['yellow'],
-    lineNumber: [{no: 2, color: 'yellow'}],
-    details: {},
-  },
-  {
-    name: 'DELHI GATE',
-    lines: ['yellow'],
-    lineNumber: [{no: 2, color: 'yellow'}],
-    details: {},
-  },
-  {
-    name: 'DHANSA BUS STAND',
-    lines: ['yellow'],
-    lineNumber: [{no: 2, color: 'yellow'}],
-    details: {},
-  },
-];
 const noidaStations = [
   {
     serial: 0,
@@ -441,6 +26,17 @@ const noidaStations = [
       'Toward DELPORT': '22:00:30',
       'Toward NOIDA NOIDA SECTOR 51': '-',
     },
+    metro_lines: [
+      {
+        id: 3,
+        name: 'Line 1',
+        line_color: 'Aqua Line',
+        primary_color_code: '#3b76c0',
+        secondary_color_code: '#edf5ff',
+        class_primary: 'aqua',
+        status: 'Normal Service',
+      },
+    ],
     station_type: 'Elevated',
     interchange: false,
     latitude: '28.5623',
@@ -483,7 +79,6 @@ const noidaStations = [
         },
       },
     ],
-    
   },
   {
     serial: 1,
@@ -499,6 +94,17 @@ const noidaStations = [
       'Toward DELPORT': '22:02:30',
       'Toward NOIDA NOIDA SECTOR 51': '22:45:20',
     },
+    metro_lines: [
+      {
+        id: 3,
+        name: 'Line 1',
+        line_color: 'Aqua Line',
+        primary_color_code: '#3b76c0',
+        secondary_color_code: '#edf5ff',
+        class_primary: 'aqua',
+        status: 'Normal Service',
+      },
+    ],
     station_type: 'Elevated',
     interchange: false,
     latitude: '28.5562',
@@ -556,6 +162,17 @@ const noidaStations = [
       'Toward DELPORT': '22:03:26',
       'Toward NOIDA NOIDA SECTOR 51': '22:43:56',
     },
+    metro_lines: [
+      {
+        id: 3,
+        name: 'Line 1',
+        line_color: 'Aqua Line',
+        primary_color_code: '#3b76c0',
+        secondary_color_code: '#edf5ff',
+        class_primary: 'aqua',
+        status: 'Normal Service',
+      },
+    ],
     station_type: 'Elevated',
     interchange: false,
     latitude: '28.5559',
@@ -613,6 +230,17 @@ const noidaStations = [
       'Toward DELPORT': '22:05:12',
       'Toward NOIDA NOIDA SECTOR 51': '22:41:45',
     },
+    metro_lines: [
+      {
+        id: 3,
+        name: 'Line 1',
+        line_color: 'Aqua Line',
+        primary_color_code: '#3b76c0',
+        secondary_color_code: '#edf5ff',
+        class_primary: 'aqua',
+        status: 'Normal Service',
+      },
+    ],
     station_type: 'Elevated',
     interchange: false,
     latitude: '28.5528',
@@ -670,6 +298,17 @@ const noidaStations = [
       'Toward DELPORT': '22:07',
       'Toward NOIDA NOIDA SECTOR 51': '22:39',
     },
+    metro_lines: [
+      {
+        id: 3,
+        name: 'Line 1',
+        line_color: 'Aqua Line',
+        primary_color_code: '#3b76c0',
+        secondary_color_code: '#edf5ff',
+        class_primary: 'aqua',
+        status: 'Normal Service',
+      },
+    ],
     station_type: 'Elevated',
     interchange: false,
     latitude: '28.5536',
@@ -727,6 +366,17 @@ const noidaStations = [
       'Toward DELPORT': '22:09',
       'Toward NOIDA NOIDA SECTOR 51': '22:35',
     },
+    metro_lines: [
+      {
+        id: 3,
+        name: 'Line 1',
+        line_color: 'Aqua Line',
+        primary_color_code: '#3b76c0',
+        secondary_color_code: '#edf5ff',
+        class_primary: 'aqua',
+        status: 'Normal Service',
+      },
+    ],
     station_type: 'Elevated',
     interchange: false,
     latitude: '28.5308',
@@ -784,6 +434,17 @@ const noidaStations = [
       'Toward DELPORT': '22:12',
       'Toward NOIDA NOIDA SECTOR 51': '22:33',
     },
+    metro_lines: [
+      {
+        id: 3,
+        name: 'Line 1',
+        line_color: 'Aqua Line',
+        primary_color_code: '#3b76c0',
+        secondary_color_code: '#edf5ff',
+        class_primary: 'aqua',
+        status: 'Normal Service',
+      },
+    ],
     station_type: 'Elevated',
     interchange: false,
     latitude: '28.5536',
@@ -841,6 +502,17 @@ const noidaStations = [
       'Toward DELPORT': '22:14',
       'Toward NOIDA NOIDA SECTOR 51': '22:31',
     },
+    metro_lines: [
+      {
+        id: 3,
+        name: 'Line 1',
+        line_color: 'Aqua Line',
+        primary_color_code: '#3b76c0',
+        secondary_color_code: '#edf5ff',
+        class_primary: 'aqua',
+        status: 'Normal Service',
+      },
+    ],
     station_type: 'Elevated',
     interchange: false,
     latitude: '28.5536',
@@ -898,6 +570,17 @@ const noidaStations = [
       'Toward DELPORT': '22:17',
       'Toward NOIDA NOIDA SECTOR 51': '22:28',
     },
+    metro_lines: [
+      {
+        id: 3,
+        name: 'Line 1',
+        line_color: 'Aqua Line',
+        primary_color_code: '#3b76c0',
+        secondary_color_code: '#edf5ff',
+        class_primary: 'aqua',
+        status: 'Normal Service',
+      },
+    ],
     station_type: 'Elevated',
     interchange: false,
     latitude: '28.5536',
@@ -955,6 +638,17 @@ const noidaStations = [
       'Toward DELPORT': '22:19',
       'Toward NOIDA NOIDA SECTOR 51': '22:26',
     },
+    metro_lines: [
+      {
+        id: 3,
+        name: 'Line 1',
+        line_color: 'Aqua Line',
+        primary_color_code: '#3b76c0',
+        secondary_color_code: '#edf5ff',
+        class_primary: 'aqua',
+        status: 'Normal Service',
+      },
+    ],
     station_type: 'Elevated',
     interchange: false,
     latitude: '28.5536',
@@ -1012,6 +706,17 @@ const noidaStations = [
       'Toward DELPORT': '22:22',
       'Toward NOIDA NOIDA SECTOR 51': '22:24',
     },
+    metro_lines: [
+      {
+        id: 3,
+        name: 'Line 1',
+        line_color: 'Aqua Line',
+        primary_color_code: '#3b76c0',
+        secondary_color_code: '#edf5ff',
+        class_primary: 'aqua',
+        status: 'Normal Service',
+      },
+    ],
     station_type: 'Elevated',
     interchange: false,
     latitude: '28.5536',
@@ -1069,6 +774,17 @@ const noidaStations = [
       'Toward DELPORT': '22:24',
       'Toward NOIDA NOIDA SECTOR 51': '22:21',
     },
+    metro_lines: [
+      {
+        id: 3,
+        name: 'Line 1',
+        line_color: 'Aqua Line',
+        primary_color_code: '#3b76c0',
+        secondary_color_code: '#edf5ff',
+        class_primary: 'aqua',
+        status: 'Normal Service',
+      },
+    ],
     station_type: 'Elevated',
     interchange: false,
     latitude: '28.5536',
@@ -1126,6 +842,17 @@ const noidaStations = [
       'Toward DELPORT': '22:27',
       'Toward NOIDA NOIDA SECTOR 51': '22:19',
     },
+    metro_lines: [
+      {
+        id: 3,
+        name: 'Line 1',
+        line_color: 'Aqua Line',
+        primary_color_code: '#3b76c0',
+        secondary_color_code: '#edf5ff',
+        class_primary: 'aqua',
+        status: 'Normal Service',
+      },
+    ],
     station_type: 'Elevated',
     interchange: false,
     latitude: '28.5536',
@@ -1183,6 +910,17 @@ const noidaStations = [
       'Toward DELPORT': '22:29',
       'Toward NOIDA NOIDA SECTOR 51': '22:16',
     },
+    metro_lines: [
+      {
+        id: 3,
+        name: 'Line 1',
+        line_color: 'Aqua Line',
+        primary_color_code: '#3b76c0',
+        secondary_color_code: '#edf5ff',
+        class_primary: 'aqua',
+        status: 'Normal Service',
+      },
+    ],
     station_type: 'Elevated',
     interchange: false,
     latitude: '28.5536',
@@ -1240,6 +978,17 @@ const noidaStations = [
       'Toward DELPORT': '22:31',
       'Toward NOIDA NOIDA SECTOR 51': '22:14',
     },
+    metro_lines: [
+      {
+        id: 3,
+        name: 'Line 1',
+        line_color: 'Aqua Line',
+        primary_color_code: '#3b76c0',
+        secondary_color_code: '#edf5ff',
+        class_primary: 'aqua',
+        status: 'Normal Service',
+      },
+    ],
     station_type: 'Elevated',
     interchange: false,
     latitude: '28.5536',
@@ -1297,6 +1046,17 @@ const noidaStations = [
       'Toward DELPORT': '22:35',
       'Toward NOIDA NOIDA SECTOR 51': '22:10',
     },
+    metro_lines: [
+      {
+        id: 3,
+        name: 'Line 1',
+        line_color: 'Aqua Line',
+        primary_color_code: '#3b76c0',
+        secondary_color_code: '#edf5ff',
+        class_primary: 'aqua',
+        status: 'Normal Service',
+      },
+    ],
     station_type: 'Elevated',
     interchange: false,
     latitude: '28.4795',
@@ -1354,6 +1114,17 @@ const noidaStations = [
       'Toward DELPORT': '22:37',
       'Toward NOIDA NOIDA SECTOR 51': '22:08',
     },
+    metro_lines: [
+      {
+        id: 3,
+        name: 'Line 1',
+        line_color: 'Aqua Line',
+        primary_color_code: '#3b76c0',
+        secondary_color_code: '#edf5ff',
+        class_primary: 'aqua',
+        status: 'Normal Service',
+      },
+    ],
     station_type: 'Elevated',
     interchange: false,
     latitude: '28.5536',
@@ -1411,6 +1182,17 @@ const noidaStations = [
       'Toward DELPORT': '22:39',
       'Toward NOIDA NOIDA SECTOR 51': '22:06',
     },
+    metro_lines: [
+      {
+        id: 3,
+        name: 'Line 1',
+        line_color: 'Aqua Line',
+        primary_color_code: '#3b76c0',
+        secondary_color_code: '#edf5ff',
+        class_primary: 'aqua',
+        status: 'Normal Service',
+      },
+    ],
     station_type: 'Elevated',
     interchange: false,
     latitude: '28.5536',
@@ -1468,6 +1250,17 @@ const noidaStations = [
       'Toward DELPORT': '22:42',
       'Toward NOIDA NOIDA SECTOR 51': '22:03',
     },
+    metro_lines: [
+      {
+        id: 3,
+        name: 'Line 1',
+        line_color: 'Aqua Line',
+        primary_color_code: '#3b76c0',
+        secondary_color_code: '#edf5ff',
+        class_primary: 'aqua',
+        status: 'Normal Service',
+      },
+    ],
     station_type: 'Elevated',
     interchange: false,
     latitude: '28.5536',
@@ -1525,6 +1318,17 @@ const noidaStations = [
       'Toward DELPORT': '22:44',
       'Toward NOIDA NOIDA SECTOR 51': '22:01',
     },
+    metro_lines: [
+      {
+        id: 3,
+        name: 'Line 1',
+        line_color: 'Aqua Line',
+        primary_color_code: '#3b76c0',
+        secondary_color_code: '#edf5ff',
+        class_primary: 'aqua',
+        status: 'Normal Service',
+      },
+    ],
     station_type: 'Elevated',
     interchange: false,
     latitude: '28.4846',
@@ -1582,6 +1386,17 @@ const noidaStations = [
       'Toward DELPORT': '-',
       'Toward NOIDA NOIDA SECTOR 51': '22:00',
     },
+    metro_lines: [
+      {
+        id: 3,
+        name: 'Line 1',
+        line_color: 'Aqua Line',
+        primary_color_code: '#3b76c0',
+        secondary_color_code: '#edf5ff',
+        class_primary: 'aqua',
+        status: 'Normal Service',
+      },
+    ],
     station_type: 'Elevated',
     interchange: false,
     latitude: '28.4889',
@@ -2172,7 +1987,6 @@ const fareRouteLineColor: any = {
 };
 
 export {
-  delhiStations,
   noidaStations,
   kolkataStations,
   drawerComponents,

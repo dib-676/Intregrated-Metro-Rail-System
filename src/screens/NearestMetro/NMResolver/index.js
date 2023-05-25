@@ -18,7 +18,7 @@ export const getNearestStations = () => {
       const stationData = data.results.map(val => {
         return {label: val.name, location: val.geometry.location};
       });
-      console.log(stationData);
+      console.log('Splash Call Nearest Station====> ', stationData);
       dispatch(setStationData(stationData));
     }
   }, [isLoading]);

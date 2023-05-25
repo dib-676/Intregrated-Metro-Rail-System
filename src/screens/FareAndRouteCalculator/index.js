@@ -1,17 +1,17 @@
 import {FlatList, SafeAreaView, ScrollView, Text, View} from 'react-native';
 import ChipSelector from '../../components/ChipSelector';
-import {useCallback, useEffect, useState} from 'react';
+import {useCallback, useEffect, useState, useLayoutEffect} from 'react';
 import {fareChart} from '../../constants';
 import {useSelector} from 'react-redux';
 import FareStationInterChange from './components/FareStationInterChange';
 import RouteMap from './components/RouteMap';
 import PathIcon from '../../components/PathIcon';
 import style from './style';
+import {fareScreenHeader} from '../../routes/headers';
 
 const FareAndRoute = props => {
-  const {city, source_stCode, destination_stCode} = useSelector(
-    state => state.metroReducer,
-  );
+  const {city, source_stCode, destination_stCode, source, destination} =
+    useSelector(state => state.metroReducer);
   const {day, value} = props.route.params;
   const [chipState, setChipState] = useState(
     value === 'least-distance' ? 0 : 1,
@@ -42,6 +42,14 @@ const FareAndRoute = props => {
     });
     setDefState(false);
   });
+  useLayoutEffect(() => {
+    fareScreenHeader({
+      navigation: props.navigation,
+      source: source,
+      destination: destination,
+    });
+  }, []);
+
   console.log('fare', fare);
   console.log('time', time);
   console.log('station', station);

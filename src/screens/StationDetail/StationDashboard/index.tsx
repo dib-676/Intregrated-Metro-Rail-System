@@ -15,15 +15,6 @@ const StationDashboard = ({navigation}: any) => {
   const {station_stCode, city, stationDetail} = useSelector(
     (state: any) => state.metroReducer,
   );
-  // useEffect(() => {
-  //   setLoading(true);
-  //   fetchStationDetail({
-  //     city: city,
-  //     station_code: station_stCode,
-  //     setStationDetail: setStationDetail,
-  //     setLoading: setLoading,
-  //   });
-  // }, []);
 
   console.log('stationDetail ==== >', stationDetail);
   console.log('loading ==== >', loading);
@@ -37,7 +28,7 @@ const StationDashboard = ({navigation}: any) => {
               onBackPress={() => navigation.goBack()}
               label={stationDetail?.station_name}
             />
-            {/* <StationServiceAlert data={stationDetail?.metro_lines} /> */}
+            <StationServiceAlert data={stationDetail?.metro_lines} />
             <StationMapView
               lat={stationDetail?.latitude}
               long={stationDetail?.longitude}

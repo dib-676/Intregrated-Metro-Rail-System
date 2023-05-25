@@ -12,7 +12,7 @@ export const metroApi = createApi({
   endpoints: builder => ({
     getStations: builder.query({
       query: location =>
-        `/place/nearbysearch/json?key=${API_KEY}&location=${location.lat},${location.long}&radius=5000&type=subway_station`,
+        `/place/nearbysearch/json?key=${API_KEY}&location=${location.lat},${location.long}&radius=15000&type=subway_station`,
     }),
     getDistance: builder.query({
       query: location =>

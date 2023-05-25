@@ -1,6 +1,6 @@
-import {FlatList, View, Text} from 'react-native';
+import {FlatList, View, Text, Image} from 'react-native';
 import style from './style';
-import {colors, dimensions} from '../../../utils';
+import {colors, dimensions, images} from '../../../utils';
 import {fareRouteLineColor, lineColors} from '../../../constants';
 const {vw, vh} = dimensions;
 const StationServiceAlert = (props: any) => {
@@ -24,9 +24,35 @@ const StationServiceAlert = (props: any) => {
             borderColor: item.color,
             backgroundColor: fareRouteLineColor[item.line_color],
           }}>
-          <View></View>
+          <View
+            style={{
+              flexDirection: 'row',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}>
+            <Image
+              source={images.trainImg}
+              style={{
+                width: vw(20),
+                height: vh(20),
+                tintColor: colors.darkBlack,
+                marginEnd: vw(10),
+              }}
+            />
+            <View>
+              <Text style={{fontSize: vw(13), color: colors.darkBlack}}>
+                {item.name}
+              </Text>
+              <Text style={{fontSize: vw(13), color: colors.darkBlack}}>
+                {item.line_color}
+              </Text>
+            </View>
+          </View>
+
           <View>
-            <Text>{item.status}</Text>
+            <Text style={{fontSize: vw(11), color: colors.darkBlack}}>
+              {item.status}
+            </Text>
           </View>
         </View>
       </View>

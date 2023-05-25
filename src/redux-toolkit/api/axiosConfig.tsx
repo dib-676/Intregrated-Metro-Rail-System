@@ -1,6 +1,6 @@
 import axios from 'axios';
-import {noidaStations} from '../../constants';
-
+import {kolkataStations, noidaStations} from '../../constants';
+import delhiMetroDetail from '../../constants/stationName/delhiMetroDetail.json';
 export const BASE_URL = 'https://backend.delhimetrorail.com';
 export const API_BASE_URL = `${BASE_URL}/api/v2/en`;
 export const PRIMARY_URL = 'https://maps.googleapis.com/maps/api';
@@ -30,22 +30,24 @@ export const fetchStationDetail = ({
   setStationDetail,
   dispatch,
   navigation,
-}: // setLoading,
-any) => {
-  console.log('fetchStation', city);
+}: any) => {
   if (city === 'Delhi Metro') {
     console.log('fetch station x');
-    axios
-      .get(`${API_BASE_URL}/station/${station_code}`)
-      .then(response => {
-        // setLoading(false);
-        dispatch(setStationDetail(response.data));
-        navigation.navigate('StationDashboard');
-      })
-      .catch(err => console.log(err));
+    const stationDetail = delhiMetroDetail.filter(
+      (val: any) => val.station_code === station_code,
+    )[0];
+    dispatch(setStationDetail(stationDetail));
+    navigation.navigate('StationDashboard');
   } else if (city === 'Noida Metro') {
     console.log('fetch station x');
     const stationDetail = noidaStations.filter(
+      val => val.station_code === station_code,
+    )[0];
+    dispatch(setStationDetail(stationDetail));
+    navigation.navigate('StationDashboard');
+  } else if (city === 'Kolkata Metro') {
+    console.log('fetch station x');
+    const stationDetail = kolkataStations.filter(
       val => val.station_code === station_code,
     )[0];
     dispatch(setStationDetail(stationDetail));
